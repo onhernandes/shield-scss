@@ -1,1 +1,1 @@
-Simple SCSS mixins I use on my work.
+Simple SCSS files I use on my work.
