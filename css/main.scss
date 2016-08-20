@@ -1,6 +1,9 @@
-@import '../docs/reset.scss';
-@import '../docs/mixins.scss';
-@import '../docs/colors.scss';
+---
+need: need
+---
+@import 'reset.scss';
+@import 'mixins.scss';
+@import 'colors.scss';
 
 body {
 	background-color: lighten($yellow, 20%);
