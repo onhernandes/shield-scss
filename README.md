@@ -1,1 +1,0 @@
-Simple SCSS files I use on my work.
