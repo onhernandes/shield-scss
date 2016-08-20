@@ -19,7 +19,7 @@ body {
 	padding: 17px;
 
 	> ul > li {
-		padding-left: 7px;
+		padding-right: 25px;
 		text-align: right;
 		display: inline-block;
 		
@@ -28,7 +28,7 @@ body {
 			font-weight: 400;
 		}
 
-		&:first-child {padding-left: 0;}
+		&:last-child {padding-right: 0;}
 	}
 }
 
@@ -71,6 +71,7 @@ body {
 	border-bottom: 2px solid $gray;
 
 	h1 {
+		font-size: 40px;
 	}
 }
 
