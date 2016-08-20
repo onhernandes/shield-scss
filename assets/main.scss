@@ -1,56 +1,102 @@
-@import 'reset.scss';
+@import '../docs/reset.scss';
 @import '../docs/mixins.scss';
+@import '../docs/colors.scss';
+
+body {
+	background-color: lighten($yellow, 20%);
+	color: $gray;
+}
+
+.menu {
+	width: 100%;
+	text-align: left;
+	height: auto;
+	position: fixed;
+	background-color: rgba(0,0,0,0.7);
+	z-index: 999;
+	right: 0;
+	top: 0;
+	padding: 17px;
+
+	> ul > li {
+		padding-left: 7px;
+		text-align: right;
+		display: inline-block;
+		
+		> a {
+			color: #fff;
+			font-weight: 400;
+		}
+
+		&:first-child {padding-left: 0;}
+	}
+}
 
 .main {
 	width: 100%;
 	height: 100vh;
-	background-color: #ffa500;
+	background-color: $yellow;
+	text-align: center;
 	@include flex(wrap row);
-	@include flex-align(center, center, center);
+	@include flex-align(center, flex-start, flex-start);
 
-	.shield-container {
-		flex: 0 0;
-		.shield {
-			width: 100px;
-			position: relative;
-		    height: 90px;
-		}
+	h1, a {flex: 0 0 100%;}
 
-		.shield:before,
-		.shield:after {
-		    position: absolute;
-		    content: "";
-		    left: 50px;
-		    top: 0;
-		    width: 50px;
-		    height: 80px;
-		    background: red;
-		    -moz-border-radius: 50px 50px 0 0;
-		    border-radius: 50px 50px 0 0;
-		    -webkit-transform: rotate(-45deg);
-		       -moz-transform: rotate(-45deg);
-		        -ms-transform: rotate(-45deg);
-		         -o-transform: rotate(-45deg);
-		            transform: rotate(-45deg);
-		    -webkit-transform-origin: 0 100%;
-		       -moz-transform-origin: 0 100%;
-		        -ms-transform-origin: 0 100%;
-		         -o-transform-origin: 0 100%;
-		            transform-origin: 0 100%;
-		}
+	h1 {
+		padding: 45px 0 20px;
+		color: #fff;
+		font-size: 90px;
+		text-transform: lowercase;
+	}
 
-		.shield:after {
-		    left: 0;
-		    -webkit-transform: rotate(45deg);
-		       -moz-transform: rotate(45deg);
-		        -ms-transform: rotate(45deg);
-		         -o-transform: rotate(45deg);
-		            transform: rotate(45deg);
-		    -webkit-transform-origin: 100% 100%;
-		       -moz-transform-origin: 100% 100%;
-		        -ms-transform-origin: 100% 100%;
-		         -o-transform-origin: 100% 100%;
-		            transform-origin :100% 100%;
+	.shield {
+		flex: 0 0 100px;
+		background-color: #fff;
+		height: 100px;
+	}
+
+	> a {
+		bottom: 0;
+	}
+}
+
+.intro {
+	width: 100%;
+	height: auto;
+	@include flex(wrap row);
+	@include flex-align(flex-start, center, center);
+	text-align: left;
+	padding: 3% 5%;
+	border-bottom: 2px solid $gray;
+
+	h1 {
+	}
+}
+
+.examples {
+	width: 100%;
+	height: auto;
+	padding: 3% 5%;
+	@include flex(wrap row);
+	@include flex-align(center, flex-start, flex-start);
+	border-bottom: 2px solid $gray;
+
+	article {
+		flex: 0 0 calc(100% / 3);
+		height: auto;
+		text-align: left;
+
+		.result,
+		code {
+			width: 100%;
+			height: 100px;
+			padding: 15px;
 		}
 	}
+}
+
+.use {
+	width: 100%;
+	height: auto;
+	padding: 3% 5%;
 }
