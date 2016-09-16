@@ -5,6 +5,12 @@
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+	
+	-webkit-display: flex;
+	-moz-display: flex;
+	-ms-display: flex;
+	-o-display: flex;
+	display: flex;
 
 	-webkit-flex-flow: $flow;
 	-moz-flex-flow: $flow;
