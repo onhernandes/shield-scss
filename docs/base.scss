@@ -1,9 +1,5 @@
 // Initial variables
 
-// Font family
-$family-whole-page: 'Roboto';
-$family-font-type: 'sans-serif';
-
 // Bigger heading tags
 $bigger-h1: 38px;
 
@@ -13,12 +9,12 @@ $font-size-tablet: 17px;
 $font-size-cellphone: 18px;
 
 // Some definitions of device widths
-$width-iphone-six: 375px;
-$width-iphone-five: 320px;
-$width-commom-cellphone: 420px;
-$width-cellphone: 560px;
-$width-tiny-tablet: 760px;
-$width-tablet: 960px;
-$width-desktop: 1280px;
-$width-tiny-desktop: 1024px;
-$width-large-desktop: 1366px;
+$iphone-five: 320px;
+$iphone-six: 375px;
+$commom-cellphone: 420px;
+$cellphone: 560px;
+$tiny-tablet: 760px;
+$tablet: 960px;
+$tiny-desktop: 1024px;
+$desktop: 1280px;
+$large-desktop: 1366px;

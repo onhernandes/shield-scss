@@ -1,12 +1,9 @@
 // Reset
-@if $family-whole-page == Roboto {
-	@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700';
-} @else if $family-whole-page == Open Sans {
-	@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700';
-}
+
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700';
 
 * {
-    font-family: $family-whole-page, $family-font-type;
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     box-sizing: border-box;
     border: none;
