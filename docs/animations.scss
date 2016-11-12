@@ -1,0 +1,146 @@
+// Flip
+@-webkit-keyframes flip {
+	from {
+		@include transform(rotate(0deg));
+		animation-timing-function: ease-out;
+	}
+	
+	to {
+		@include transform(rotate(360deg));
+		animation-timing-function: ease-in;
+	}
+}
+
+@-o-keyframes flip {
+	from {
+		@include transform(rotate(0deg));
+		animation-timing-function: ease-out;
+	}
+	
+	to {
+		@include transform(rotate(360deg));
+		animation-timing-function: ease-in;
+	}
+}
+
+@-moz-keyframes flip {
+	from {
+		@include transform(rotate(0deg));
+		animation-timing-function: ease-out;
+	}
+	
+	to {
+		@include transform(rotate(360deg));
+		animation-timing-function: ease-in;
+	}
+}
+
+@keyframes flip {
+	from {
+		@include transform(rotate(0deg));
+		animation-timing-function: ease-out;
+	}
+	
+	to {
+		@include transform(rotate(360deg));
+		animation-timing-function: ease-in;
+	}
+}
+
+// Reverse Flip
+@-webkit-keyframes reverse_flip {
+	from {
+		@include transform(rotate(360deg));
+		animation-timing-function: ease-out;
+	}
+	
+	to {
+		@include transform(rotate(0deg));
+		animation-timing-function: ease-in;
+	}
+}
+
+@-o-keyframes reverse_flip {
+	from {
+		@include transform(rotate(360deg));
+		animation-timing-function: ease-out;
+	}
+	
+	to {
+		@include transform(rotate(0deg));
+		animation-timing-function: ease-in;
+	}
+}
+
+@-moz-keyframes reverse_flip {
+	from {
+		@include transform(rotate(360deg));
+		animation-timing-function: ease-out;
+	}
+	
+	to {
+		@include transform(rotate(0deg));
+		animation-timing-function: ease-in;
+	}
+}
+
+@keyframes reverse_flip {
+	from {
+		@include transform(rotate(360deg));
+		animation-timing-function: ease-out;
+	}
+	
+	to {
+		@include transform(rotate(0deg));
+		animation-timing-function: ease-in;
+	}
+}
+
+// Flip X
+@-webkit-keyframes flip_x {
+	from {
+		@include transform(rotateX(0deg));
+		animation-timing-function: ease-out;
+	}
+	
+	to {
+		@include transform(rotateX(360deg));
+		animation-timing-function: ease-in;
+	}
+}
+
+@-o-keyframes flip_x {
+	from {
+		@include transform(rotateX(0deg));
+		animation-timing-function: ease-out;
+	}
+	
+	to {
+		@include transform(rotateX(360deg));
+		animation-timing-function: ease-in;
+	}
+}
+
+@-moz-keyframes flip_x {
+	from {
+		@include transform(rotateX(0deg));
+		animation-timing-function: ease-out;
+	}
+	
+	to {
+		@include transform(rotateX(360deg));
+		animation-timing-function: ease-in;
+	}
+}
+
+@keyframes flip_x {
+	from {
+		@include transform(rotateX(0deg));
+		animation-timing-function: ease-out;
+	}
+	
+	to {
+		@include transform(rotateX(360deg));
+		animation-timing-function: ease-in;
+	}
+}
