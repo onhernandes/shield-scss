@@ -1,20 +1,44 @@
 // Initial variables
 
-// Bigger heading tags
-$bigger-h1: 38px;
+/*---------------FONT SETTINGS---------------*/
+
+// Heading sizes(h1, h2, h3..)
+$headers: (
+	h1: 32px,
+	h2: 24px,
+	h3: 18.5px,
+	h4: 16px,
+	h5: 13.5px,
+	h6: 11px
+);
+
 
 // Font size
-$font-size-desktop: 16px;
-$font-size-tablet: 17px;
-$font-size-cellphone: 18px;
+// It's bigger on minor screens because it'll be used on tags like <p> and <span>
+$font-size: (
+	desktop: 16px,
+	tablet: 17px,
+	phone: 18px
+);
 
-// Some definitions of device widths
-$iphone-five: 320px;
-$iphone-six: 375px;
-$commom-cellphone: 420px;
-$cellphone: 560px;
-$tiny-tablet: 760px;
-$tablet: 960px;
-$tiny-desktop: 1024px;
-$desktop: 1280px;
-$large-desktop: 1366px;
+// Font family
+$font-family: (
+	page: 'Roboto Condensed',
+	texting: 'Roboto',
+	type: 'sans-serif'
+);
+
+/*---------------OTHERS SETTINGS---------------*/
+
+// Some device width settings that I use most
+$devices: (
+	desktop: 1280px,
+	tablet: 1024px.
+	phone: 760px
+);
+
+// Z-index
+// It's better you organize your z-indexes here and get them with either a mixin or function
+$z-index: (
+	base: 0
+);

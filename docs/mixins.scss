@@ -70,3 +70,12 @@
 	-o-transform: $transform;
 	transform: $transform;
 }
+
+@mixin font-size($size) {
+	@if map-has-key($font-size, $size) == false {
+		@warn "This font-size doesn't exist";
+		@return null;
+	} 
+	
+	font-size: map-get($font-size, $size);
+}
