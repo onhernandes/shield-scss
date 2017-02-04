@@ -116,3 +116,14 @@
 		}
 	}
 }
+
+@mixin input-placeholder($data) {
+	::-webkit-input-placeholder {}
+	
+	:-moz-placeholder {}
+	
+	::-moz-placeholder {}
+	
+	:-ms-input-placeholder {}
+	
+}

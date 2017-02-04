@@ -3,13 +3,13 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700';
 
 * {
-    font-family: 'Roboto', sans-serif;
+    @include font-family('Roboto');
+    @include box-sizing('border-box');
+	@include z-index('base');
     font-weight: 300;
-    box-sizing: border-box;
     border: none;
 	margin: 0;
 	padding: 0;
-	z-index: 0;
 }
 
 a,
@@ -19,9 +19,7 @@ a:active {
 	text-decoration: none;
 }
 
-p, span {
-	font-size: $font-size-tablet;
-}
+p, span { @include font-size('desktop'); }
 
 section {
 	width: 100%;
@@ -29,20 +27,11 @@ section {
 }
 
 h1, h2, h3,
-h4, h5, h6 {
-	font-weight: 400;
-}
+h4, h5, h6 { font-weight: 400; }
 
-h1 {font-size: 32px;}
-h2 {font-size: 24px;}
-h3 {font-size: 18.5px;}
-h4 {font-size: 16px;}
-h5 {font-size: 13.5px;}
-h6 {font-size: 11px;}
+@include header-tags();
 
-ul {
-	list-style-type: none;
-}
+ul { list-style-type: none; }
 
 input, textarea, button {
 	display: block;
@@ -51,11 +40,4 @@ input, textarea, button {
 
 input[type="button"],
 input[type="submit"],
-button {
-	cursor: pointer;
-}
-
-::-webkit-input-placeholder {}
-:-moz-placeholder {}
-::-moz-placeholder {}
-:-ms-input-placeholder {}
+button { cursor: pointer; }
