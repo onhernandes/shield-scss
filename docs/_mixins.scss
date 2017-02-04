@@ -1,57 +1,72 @@
-// Define a flex container and your flow
-@mixin flex($flow) {
+// Display flex
+@mixin display-flex() {
 	display: -webkit-flex;
-	display: -moz-flex;
 	display: -ms-flex;
-	display: -o-flex;
 	display: flex;
+}
 
+// Set flex flow
+@mixin flex-flow($flow) {
 	-webkit-flex-flow: $flow;
-	-moz-flex-flow: $flow;
 	-ms-flex-flow: $flow;
-	-o-flex-flow: $flow;
 	flex-flow: $flow;
 }
 
 // Define a inline-flex
-@mixin inline-flex($flow) {
+@mixin inline-flex() {
 	display: -webkit-inline-flex;
-	display: -moz-inline-flex;
 	display: -ms-inline-flex;
-	display: -o-inline-flex;
 	display: inline-flex;
+}
 
-	-webkit-flex-flow: $flow;
-	-moz-flex-flow: $flow;
-	-ms-flex-flow: $flow;
-	-o-flex-flow: $flow;
-	flex-flow: $flow;
+// Define a flex container and your flow
+@mixin flex-container($flow, $inline: false) {
+	@if $inline == true {
+		@include inline-flex();
+	} @else {
+		@include display-flex();	
+	}
+
+	@include flex-flow($flow);
+}
+
+// Set justify-content
+@mixin justify-content($align) {
+	-webkit-justify-content: $align;
+	-ms-justify-content: $align;
+	justify-content: $align;	
+}
+
+// Set align-items
+@mixin align-items($align) {
+	-webkit-align-items: $align;
+	-ms-align-items: $align;
+	align-items: $align;	
+}
+
+// Set align-content
+@mixin align-content($align) {
+	-webkit-align-content: $align;
+	-ms-align-content: $align;
+	align-content: $align;	
 }
 
 // Define the alignment for a flex container
 @mixin flex-align($justify-content, $align-items, $align-content) {
-	-webkit-justify-content: $justify-content;
-	-moz-justify-content: $justify-content;
-	justify-content: $justify-content;
-
-	-webkit-align-items: $align-items;
-	align-items: $align-items;
-
-	align-content: $align-content;
-	-webkit-align-content: $align-content;
+	@include justify-content($justify-content);
+	@include align-items($align-items);
+	@include align-content($align-content);
 }
 
 // Define the property for box-sizing
 @mixin box-sizing($bs) {
 	-webkit-box-sizing: $bs;
-	-moz-box-sizing: $bs;
 	box-sizing: $bs;
 }
 
 // Define the property for transition
 @mixin transition($transition) {
 	-webkit-transition: $transition;
-	-moz-transition: $transition;
 	-o-transition: $transition;
 	transition: $transition;
 }
@@ -59,12 +74,11 @@
 // Define the property for transform
 @mixin transform($transform) {
 	-webkit-transform: $transform;
-	-moz-transform: $transform;
 	-ms-transform: $transform;
-	-o-transform: $transform;
 	transform: $transform;
 }
 
+// Font-size using $font-size map
 @mixin font-size($size) {
 	@if map-has-key($font-size, $size) == false {
 		@warn "This font-size doesn't exist";
@@ -72,4 +86,33 @@
 	} 
 	
 	font-size: map-get($font-size, $size);
+}
+
+// Font-family using $font-family map
+@mixin font-family($font-name) {
+	@if map-has-key($font-family, $font-name) == false {
+		@warn "This font-family doesn't exist";
+		@return null;
+	} 
+	
+	font-family: map-get($font-family, $font-name), map-get($font-family, type);
+}
+
+// z-index using $z-index map
+@mixin z-index($z) {
+	@if map-has-key($z-index, $z) == false {
+		@warn "This z-index doesn't exist";
+		@return null;
+	} 
+	
+	z-index: map-get($z-index, $z);
+}
+
+// Generate headers like h1, h2 and more
+@mixin header-tags() {
+	@each $h, $val in $headers {
+		.#{$h} {
+			font-size: $val;
+		}
+	}
 }
