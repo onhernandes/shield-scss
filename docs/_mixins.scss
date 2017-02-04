@@ -117,13 +117,43 @@
 	}
 }
 
-@mixin input-placeholder($data) {
-	::-webkit-input-placeholder {}
-	
-	:-moz-placeholder {}
-	
-	::-moz-placeholder {}
-	
-	:-ms-input-placeholder {}
-	
+// Generate input-placeholder CSS
+@mixin input-placeholder($input) {
+	#{$input}::-webkit-input-placeholder {
+		@content;
+	}
+
+	#{$input}:-moz-placeholder {
+		@content;
+	}
+
+	#{$input}::-moz-placeholder {
+		@content;
+	}
+
+	#{$input}:-ms-input-placeholder {
+		@content;
+	}
+}
+
+// Media query with max-width
+@mixin media-max($breakpoint) {
+	@if map-has-key($devices, $breakpoint) {
+		@media screen and (max-width: $breakpoint) {
+			@content;
+		}
+	}
+
+	@warn 'This breakpoint doesn\'t exist on $devices';
+}
+
+// Media query with min-width
+@mixin media-min($breakpoint) {
+	@if map-has-key($devices, $breakpoint) {
+		@media screen and (min-width: $breakpoint) {
+			@content;
+		}
+	}
+
+	@warn 'This breakpoint doesn\'t exist on $devices';
 }
