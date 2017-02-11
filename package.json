@@ -1,6 +1,6 @@
 {
   "name": "shield-scss",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "basic scss files for web development",
   "main": "index.js",
   "directories": {
@@ -16,9 +16,7 @@
   "keywords": [
     "sass",
     "scss",
-    "shield",
-    "web",
-    "dev"
+    "shield"
   ],
   "author": "Hernandes",
   "license": "MIT",
@@ -28,8 +26,11 @@
   "homepage": "https://github.com/mhernandes/shield-scss#readme",
   "devDependencies": {
     "browser-sync": "^2.18.7",
+    "cssmin": "^0.4.3",
     "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0"
+    "gulp-sass": "^3.1.0",
+    "plumber": "^0.4.8"
   }
 }
