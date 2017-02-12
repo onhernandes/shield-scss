@@ -5,18 +5,18 @@ var gulp = require('gulp'),
 	cssmin = require('cssmin'),
 	browserSync = require('browser-sync');
 
-var paths = {
-	dev: 'src/shield.scss',
-	watch_scss: 'src/*.scss',
-	watch_html: '*.html',
-	out: 'main.css'
+var base = '',
+	devBase = base + 'src',
+	paths = {
+		dev: './src/shield.scss',
+		watch_scss: './src/*.scss',
+		watch_html: './*.html',
+		out: './assets'
 };
 
 gulp.task('build', function() {
 	browserSync.init({
-		server: {
-			baseDir: './'
-		},
+		server: true,
 		open: false
 	});
 });
@@ -25,17 +25,15 @@ gulp.task('rebuild', function() {
 	browserSync.reload();
 });
 
-gulp.task('css', function() {
-	gulp.src(paths.dev)
-		.pipe(plumber())
-		.pipe(scss())
-		.pipe(gulp.dest(paths.out))
-		.pipe(browserSync.reload({stream: true}));
+gulp.task('styles', function() {
+    gulp.src(paths.dev)
+        .pipe(scss().on('error', scss.logError))
+        .pipe(rename('main.css'))
+        .pipe(gulp.dest(paths.out));
 });
 
-function runner() {
-	gulp.watch(paths.watch_scss, ['css']);
-	gulp.watch(paths.watch_html, ['rebuild']);
-}
-
-gulp.task('default', ['css', 'build'], runner);
+//Watch task
+gulp.task('default', ['styles', 'build'], function() {
+		gulp.watch(paths.watch_scss, ['style']);
+		gulp.watch(paths.watch_html, ['rebuild']);
+});

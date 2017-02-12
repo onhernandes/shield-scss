@@ -79,22 +79,12 @@
 }
 
 // Font-size using $font-size map
-@mixin font-size($size) {
-	@if map-has-key($font-size, $size) == false {
-		@warn "This font-size doesn't exist";
-		@return null;
-	} 
-	
+@mixin font-size($size) {	
 	font-size: map-get($font-size, $size);
 }
 
 // Font-family using $font-family map
-@mixin font-family($font-name) {
-	@if map-has-key($font-family, $font-name) == false {
-		@warn "This font-family doesn't exist";
-		@return null;
-	} 
-	
+@mixin font-family($font-name) {	
 	font-family: map-get($font-family, $font-name), map-get($font-family, type);
 }
 
@@ -102,11 +92,11 @@
 @mixin z-index($z) {
 	@if map-has-key($z-index, $z) == false {
 		@warn "This z-index doesn't exist";
-		@return null;
 	} 
 	
 	z-index: map-get($z-index, $z);
 }
+
 
 // Generate headers like h1, h2 and more
 @mixin header-tags() {

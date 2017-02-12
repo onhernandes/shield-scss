@@ -3,9 +3,9 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700';
 
 * {
-    @include font-family('Roboto');
+    @include font-family(texting);
     @include box-sizing('border-box');
-	@include z-index('base');
+	@include z-index(base);
     font-weight: 300;
     border: none;
 	margin: 0;
