@@ -1,10 +1,16 @@
 /*----------HELPERS----------*/
 
-/* get $variables map or var */
-@function getVar($var) {
-	@return map-get($variables, $var);
+/* camelCase for map-get() */
+@function get($map, $val) {
+	@return map-get($map, $val);
 }
 
+/* get $variables map or var */
+@function getVar($var) {
+	@return get($variables, $var);
+}
+
+/* camelCase for map-has-key() */
 @function hasKey($map, $key) {
 	@if map-has-key($map, $key) {
 		@return true;
@@ -13,6 +19,7 @@
 	}
 }
 
+/* camelCase for map-has-key() based on $variables */
 @function hasKeyVar($key) {
 	@if hasKey($variables, $key) {
 		@return true;
