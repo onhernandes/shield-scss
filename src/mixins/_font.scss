@@ -1,9 +1,20 @@
-// Font-size using $font-size map
+/*----------FONT MIXINS----------*/
+
+/* return font-size using $font-size map */
 @mixin font-size($size) {	
-	font-size: map-get($font-size, $size);
+	font-size: getFontSize($size);
 }
 
-// Font-family using $font-family map
-@mixin font-family($font-name) {	
-	font-family: map-get($font-family, $font-name), map-get($font-family, type);
+/* return font-family using $font-family map */
+@mixin font-family($family, $type: sans) {	
+	font-family: getFontFamily($family), getFontType($type);
+}
+
+/* return headers like h1, h2 and more */
+@mixin header-tags() {
+	@each $h, $val in $headers {
+		.#{$h} {
+			font-size: $val;
+		}
+	}
 }

@@ -1,0 +1,20 @@
+/*----------FORM MIXINS----------*/
+
+// Generate input-placeholder CSS
+@mixin input-placeholder($input) {
+	#{$input}::-webkit-input-placeholder {
+		@content;
+	}
+
+	#{$input}:-moz-placeholder {
+		@content;
+	}
+
+	#{$input}::-moz-placeholder {
+		@content;
+	}
+
+	#{$input}:-ms-input-placeholder {
+		@content;
+	}
+}

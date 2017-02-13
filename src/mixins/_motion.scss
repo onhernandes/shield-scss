@@ -1,0 +1,15 @@
+/*----------MOTION MIXINS----------*/
+
+// Define the property for transition
+@mixin transition($transition) {
+	-webkit-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+}
+
+// Define the property for transform
+@mixin transform($transform) {
+	-webkit-transform: $transform;
+	-ms-transform: $transform;
+	transform: $transform;
+}

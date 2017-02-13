@@ -4,7 +4,7 @@ The Shield is a little package with the files that I use on my job
 
 ## Notes (for me when developing this thing and for who wanna use this)
 
-1. Functions are written in camelCase, variables and mixins in lowercase with underscore separators
+1. Functions are written in camelCase, variables and mixins in lower-case separated by -
 1. Copy everything inside of `src/` folder and just include `shield.scss` on your main SASS/SCSS file
 1. Variables are stored inisde of `functions/*.scss`, each file has your variables that will be used by the whole lib
 1. For __manipulate/get__ variables/values you need to use __functions__ that are stored in `functions/` folder (like get a map value or calculate height).

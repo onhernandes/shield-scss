@@ -1,0 +1,38 @@
+/*----------STRUCTURE MIXINS----------*/
+
+// Media query with max-width
+@mixin media-max($breakpoint) {
+	@if map-has-key($devices, $breakpoint) {
+		@media screen and (max-width: $breakpoint) {
+			@content;
+		}
+	}
+
+	@warn 'This breakpoint doesn\'t exist on $devices';
+}
+
+// Media query with min-width
+@mixin media-min($breakpoint) {
+	@if map-has-key($devices, $breakpoint) {
+		@media screen and (min-width: $breakpoint) {
+			@content;
+		}
+	}
+
+	@warn 'This breakpoint doesn\'t exist on $devices';
+}
+
+// Define the property for box-sizing
+@mixin box-sizing($bs) {
+	-webkit-box-sizing: $bs;
+	box-sizing: $bs;
+}
+
+// z-index using $z-index map
+@mixin z-index($z) {
+	@if map-has-key($z-index, $z) == false {
+		@warn "This z-index doesn't exist";
+	} 
+	
+	z-index: map-get($z-index, $z);
+}

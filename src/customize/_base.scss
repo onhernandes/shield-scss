@@ -13,8 +13,16 @@ $variables: (
 
 Variables/maps for use
 
-$font-family: ();
-$font-size: ();
+$font-family: (
+	headers: 'Arial',
+	texts: 'Arial'
+);
+
+$font-size: (
+	desktop: 16px,
+	tablet: 17px,
+	phone: 18px	
+);
 
 */
 

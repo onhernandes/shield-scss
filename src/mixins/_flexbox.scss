@@ -1,0 +1,95 @@
+/*----------FLEXBOX MIXINS----------*/
+
+/*
+	Name: display-flex
+	Trigger: df()
+*/
+@mixin display-flex() {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+}
+
+/*
+	Name: flex-flow
+	Trigger: ff()
+*/
+@mixin flex-flow($flow) {
+	-webkit-flex-flow: $flow;
+	-ms-flex-flow: $flow;
+	flex-flow: $flow;
+}
+
+/*
+	Name: inline-flex
+	Trigger: inf()
+*/
+@mixin inline-flex() {
+	display: -webkit-inline-flex;
+	display: -ms-inline-flex;
+	display: inline-flex;
+}
+
+/*
+	Name: flex-container
+	Trigger: fc()
+*/
+@mixin flex-container($flow, $inline: false) {
+	@if $inline == true {
+		@include inline-flex();
+	} @else {
+		@include display-flex();	
+	}
+
+	@include flex-flow($flow);
+}
+
+/*
+	Name: justify-content
+	Trigger: jc()
+*/
+@mixin justify-content($align) {
+	-webkit-justify-content: $align;
+	-ms-justify-content: $align;
+	justify-content: $align;	
+}
+
+/*
+	Name: align-items
+	Trigger: ai()
+*/
+@mixin align-items($align) {
+	-webkit-align-items: $align;
+	-ms-align-items: $align;
+	align-items: $align;	
+}
+
+/*
+	Name: align-content
+	Trigger: ac()
+*/
+@mixin align-content($align) {
+	-webkit-align-content: $align;
+	-ms-align-content: $align;
+	align-content: $align;	
+}
+
+/*
+	Name: flex-align
+	Trigger: fa()
+*/
+@mixin flex-align($justify-content, $align-items, $align-content) {
+	@include justify-content($justify-content);
+	@include align-items($align-items);
+	@include align-content($align-content);
+}
+
+/*
+	Name: flex-item
+	Trigger: fi()
+*/
+@mixin flex-item($flex) {
+	-webkit-flex: $flex;
+	-ms-flex: $flex;
+	flex: $flex;
+}
