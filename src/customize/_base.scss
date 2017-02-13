@@ -13,6 +13,8 @@ $variables: (
 
 Variables/maps for use
 
+FONT STYLES
+
 $font-family: (
 	headers: 'Arial',
 	texts: 'Arial'
@@ -22,6 +24,15 @@ $font-size: (
 	desktop: 16px,
 	tablet: 17px,
 	phone: 18px	
+);
+
+STRUCTURE AND DEVICES STYLES
+
+$devices: (
+	laptop: 1366px,
+	desktop: 1280px,
+	tablet: 1024px,
+	phone: 760px
 );
 
 */

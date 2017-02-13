@@ -1,0 +1,21 @@
+/*----------DEVICE SIZES----------*/
+
+@if hasKeyVar(devices) {
+	$devices: getVar(devices);
+} @else {
+	$devices: (
+		laptop: 1366px,
+		desktop: 1280px,
+		tablet: 1024px,
+		phone: 760px
+	);
+}
+
+@function getDevice($dev) {
+	@if hasKey($devices, $dev) {
+		@return get($devices, $dev);
+	}
+
+	@warn 'This device size does not exists';
+	@return null;
+}
