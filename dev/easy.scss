@@ -1,0 +1,34 @@
+.easy {
+	padding: 2% 5%;
+
+	@include flex-container(wrap row);
+	@include justify-content(space-between);
+
+	&__line {
+		flex-basis: 100%;
+		padding-bottom: 15px;
+		text-align: center;
+	}
+
+	&__code {
+		flex-basis: calc(90% / 2);
+
+		h2 {
+			padding: 8px;
+		}
+
+		code {
+			background-color: $gray;
+			min-height: 300px;
+			display: block;
+			color: #fff;
+			padding: 15px;
+
+			span {
+				display: block;
+				font-family: monospace;
+				font-size: 14px;
+			}
+		}
+	}
+}

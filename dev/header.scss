@@ -1,0 +1,25 @@
+.header {
+	padding: 5% 0;
+	background-color: darken(map-get($color-scheme, orange), 5%);
+
+	@include flex-container(wrap row);
+	@include justify-content(center);
+
+	img, h1, p {
+		@include flex-item(0 0 auto);
+		text-align: center;
+	}
+
+	img {
+		display: block;
+	}
+
+	h1, p {
+		color: #fff;
+		flex-basis: 100%;
+	}
+
+	h1 {
+		padding: 20px;
+	}
+}
