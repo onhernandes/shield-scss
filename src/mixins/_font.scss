@@ -1,0 +1,9 @@
+// Font-size using $font-size map
+@mixin font-size($size) {	
+	font-size: map-get($font-size, $size);
+}
+
+// Font-family using $font-family map
+@mixin font-family($font-name) {	
+	font-family: map-get($font-family, $font-name), map-get($font-family, type);
+}

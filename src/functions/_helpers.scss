@@ -1,0 +1,22 @@
+/*----------HELPERS----------*/
+
+/* get $variables map or var */
+@function getVar($var) {
+	@return map-get($variables, $var);
+}
+
+@function hasKey($map, $key) {
+	@if map-has-key($map, $key) {
+		@return true;
+	} @else {
+		@return false;	
+	}
+}
+
+@function hasKeyVar($key) {
+	@if hasKey($variables, $key) {
+		@return true;
+	} @else {
+		@return false;	
+	}
+}

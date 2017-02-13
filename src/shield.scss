@@ -1,1 +1,17 @@
-@import '_base', '_colors', '_mixins', 'reset';
+@import 'color/_basic',
+		'color/_languages',
+		'customize/_base',
+		'functions/_color',
+		'functions/_font',
+		'functions/_device',
+		'mixins/_base',
+		'mixins/_coloring',
+		'mixins/_flexbox',
+		'mixins/_font',
+		'mixins/_forms',
+		'mixins/_motion',
+		'mixins/_structure',
+		'mixins/_triggers',
+		'customize/_functions',
+		'customize/_mixins',
+		'reset';
