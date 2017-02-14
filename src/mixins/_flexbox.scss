@@ -140,3 +140,14 @@
 	-ms-flex-shrink: $shrink;
 	flex-shrink: $shrink;
 }
+
+/*
+	Name: flex-basis
+	Trigger: fxb($basis)
+	Return flex-basis
+*/
+@mixin flex-basis($basis) {
+	-webkit-flex-basis: $basis;
+	-ms-flex-basis: $basis;
+	flex-basis: $basis;
+}
