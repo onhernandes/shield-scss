@@ -136,3 +136,14 @@
 	@include max-phone { @content; } 
 }
 
+/*---PRINT MEDIA-QUERIES MIXINS---*/
+
+/* short-hand for: media-print { @content } */
+@mixin mpnt {
+	@include media-print { @content; } 
+}
+
+/* short-hand for: retina { @content } */
+@mixin mret {
+	@include retina { @content; } 
+}
