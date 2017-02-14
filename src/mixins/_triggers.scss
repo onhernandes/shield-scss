@@ -75,3 +75,64 @@
 }
 
 /*---MEDIA-QUERIES MIXINS---*/
+/*---BASIC MEDIA-QUERIES MIXINS---*/
+
+/* short-hand for: media-max($bk) */
+@mixin mdmax($bk) {
+	@include media-max($bk);
+}
+
+/* short-hand for: media-min($bk) */
+@mixin mdmin($bk) {
+	@include media-min($bk);
+}
+
+/* short-hand for: media-between($min, $max) */
+@mixin mdbet($min, $max) {
+	@include media-between($min, $max);
+}
+
+/*---MIN WIDTH MEDIA-QUERIES MIXINS---*/
+
+/* short-hand for: min-laptop { @content } */
+@mixin mnlap {
+	@include min-laptop { @content; } 
+}
+
+/* short-hand for: min-desktop { @content } */
+@mixin mndk {
+	@include min-desktop { @content; } 
+}
+
+/* short-hand for: min-tablet { @content } */
+@mixin mntbt {
+	@include min-tablet { @content; } 
+}
+
+/* short-hand for: min-phone { @content } */
+@mixin mnpn {
+	@include min-phone { @content; } 
+}
+
+/*---MAX WIDTH MEDIA-QUERIES MIXINS---*/
+
+/* short-hand for: max-laptop { @content } */
+@mixin mxlap {
+	@include max-laptop { @content; } 
+}
+
+/* short-hand for: max-desktop { @content } */
+@mixin mxdk {
+	@include max-desktop { @content; } 
+}
+
+/* short-hand for: max-tablet { @content } */
+@mixin mxtbt {
+	@include max-tablet { @content; } 
+}
+
+/* short-hand for: max-phone { @content } */
+@mixin mxpn {
+	@include max-phone { @content; } 
+}
+
