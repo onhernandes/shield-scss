@@ -1,8 +1,8 @@
 /*----------STRUCTURE MIXINS----------*/
 
-// Media query with max-width
+/* media-query with max-width */
 @mixin media-max($breakpoint) {
-	@if map-has-key($devices, $breakpoint) {
+	@if hasKey($devices, $breakpoint) {
 		@media screen and (max-width: $breakpoint) {
 			@content;
 		}
@@ -11,9 +11,9 @@
 	@warn 'This breakpoint doesn\'t exist on $devices';
 }
 
-// Media query with min-width
+/* media-query with min-width */
 @mixin media-min($breakpoint) {
-	@if map-has-key($devices, $breakpoint) {
+	@if hasKey($devices, $breakpoint) {
 		@media screen and (min-width: $breakpoint) {
 			@content;
 		}
@@ -22,17 +22,125 @@
 	@warn 'This breakpoint doesn\'t exist on $devices';
 }
 
+/* media-query with min-width */
+@mixin media-between($min, $max) {
+	@if hasKey($devices, $min) and hasKey($devices, $max) {
+		@media (min-width: $min) and (max-width: $max) {
+			@content;
+		}
+	}
+
+	@warn 'These breakpoints doesn\'t exist on $devices';
+}
+
+/* media-query with min-width */
+@mixin min-laptop {
+	@if hasKey($devices, laptop) {
+		@media screen and (min-width: getDevice(laptop)) {
+			@content;
+		}
+	}
+
+	@warn 'laptop breakpoint doesn\'t exist on $devices';
+}
+
+/* media-query with min-width */
+@mixin min-desktop {
+	@if hasKey($devices, desktop) {
+		@media screen and (min-width: getDevice(desktop)) {
+			@content;
+		}
+	}
+
+	@warn 'desktop breakpoint doesn\'t exist on $devices';
+}
+
+/* media-query with min-width */
+@mixin min-tablet {
+	@if hasKey($devices, tablet) {
+		@media screen and (min-width: getDevice(tablet)) {
+			@content;
+		}
+	}
+
+	@warn 'tablet breakpoint doesn\'t exist on $devices';
+}
+
+/* media-query with min-width */
+@mixin min-phone {
+	@if hasKey($devices, phone) {
+		@media screen and (min-width: getDevice(phone)) {
+			@content;
+		}
+	}
+
+	@warn 'phone breakpoint doesn\'t exist on $devices';
+}
+
+/* media-query with max-width */
+@mixin max-laptop {
+	@if hasKey($devices, laptop) {
+		@media screen and (max-width: getDevice(laptop)) {
+			@content;
+		}
+	}
+
+	@warn 'laptop breakpoint doesn\'t exist on $devices';
+}
+
+/* media-query with max-width */
+@mixin max-desktop {
+	@if hasKey($devices, desktop) {
+		@media screen and (max-width: getDevice(desktop)) {
+			@content;
+		}
+	}
+
+	@warn 'desktop breakpoint doesn\'t exist on $devices';
+}
+
+/* media-query with max-width */
+@mixin max-tablet {
+	@if hasKey($devices, tablet) {
+		@media screen and (max-width: getDevice(tablet)) {
+			@content;
+		}
+	}
+
+	@warn 'tablet breakpoint doesn\'t exist on $devices';
+}
+
+/* media-query with max-width */
+@mixin max-phone {
+	@if hasKey($devices, phone) {
+		@media screen and (max-width: getDevice(phone)) {
+			@content;
+		}
+	}
+
+	@warn 'phone breakpoint doesn\'t exist on $devices';
+}
+
+/* media-query for print */
+@mixin media-print {
+	@media print {
+		@content;
+	}
+}
+
+/* media-query for retina */
+@mixin retina {
+	@media only screen and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (-o-min-device-pixel-ratio: 2/1),
+		only screen and (min-device-pixel-ratio: 2),
+		only screen and (min-resolution: 192dpi),
+		only screen and (min-resolution: 2dppx) { 
+			@content;
+	}
+}
+
 // Define the property for box-sizing
 @mixin box-sizing($bs) {
 	-webkit-box-sizing: $bs;
 	box-sizing: $bs;
-}
-
-// z-index using $z-index map
-@mixin z-index($z) {
-	@if map-has-key($z-index, $z) == false {
-		@warn "This z-index doesn't exist";
-	} 
-	
-	z-index: map-get($z-index, $z);
 }

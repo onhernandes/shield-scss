@@ -1,28 +1,18 @@
 /*----------DEVICE SIZES----------*/
 
-@if hasKeyVar(devices) {
-	$devices_standard: (
-		laptop: 1366px,
-		desktop: 1280px,
-		tablet: 1024px,
-		phone: 760px
-	);
+$devices-standard: (
+	laptop: 1366px,
+	desktop: 1280px,
+	tablet: 1024px,
+	phone: 760px
+);
 
-	$devices: getVar(devices);
+@if hasKeyVar(devices) {
+	$devices-custom: getVar(devices);
 	
-	// Merge two maps
-	@each $key, $val in $devices {
-		@if hasKey($device) {
-			
-		}
-	}
+	$devices: merge($devices-standard, $devices-custom);
 } @else {
-	$devices: (
-		laptop: 1366px,
-		desktop: 1280px,
-		tablet: 1024px,
-		phone: 760px
-	);
+	$devices: $devices-standard;
 }
 
 @function getDevice($dev) {

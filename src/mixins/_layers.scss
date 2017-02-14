@@ -1,0 +1,8 @@
+// z-index using $z-index map
+@mixin z-index($z) {
+	@if map-has-key($z-index, $z) == false {
+		@warn "This z-index doesn't exist";
+	} 
+	
+	z-index: map-get($z-index, $z);
+}

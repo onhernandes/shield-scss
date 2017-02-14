@@ -28,8 +28,13 @@
 	}
 }
 
+/* camelCase for map-merge() */
+@function merge($map1, $map2) {
+	@return map-merge($map1, $map2);
+}
+
 /* recursive map-merge(), thanks to sitepoint.com */
-@function map-extend($map, $maps.../*, $deep */) {
+@function mapExtend($map, $maps.../*, $deep */) {
 	$last: nth($maps, -1);
 	$deep: $last == true;
 	$max: if($deep, length($maps) - 1, length($maps));
