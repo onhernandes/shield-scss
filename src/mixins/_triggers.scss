@@ -1,1 +1,41 @@
 /*----------TRIGGERS----------*/
+
+/* short-hand for: display-flex() */
+@mixin df() {
+	@include display-flex();
+}
+
+/* short-hand for: flex-flow($flow) */
+@mixin ff($flow) {
+	@include flex-flow($flow);
+}
+
+/* short-hand for: inline-flex() */
+@mixin inf() {
+	@include inline-flex();
+}
+
+/* short-hand for: flex-container() */
+@mixin fc($flow, $inline: false) {
+	@include flex-container($flow, $inline);
+}
+
+/* short-hand for: justify-content($align) */
+@mixin jc($align) {
+	@include justify-content($align);
+}
+
+/* short-hand for: align-items($align) */
+@mixin ai($align) {
+	@include align-items($align);
+}
+
+/* short-hand for: align-content($align) */
+@mixin ac() {
+	@include align-content($align);
+}
+
+/* short-hand for: flex-align($jc, $ai, $ac) */
+@mixin fa($jc, $ai, $ac) {
+	@include flex-align($jc, $ai, $ac);
+}

@@ -138,9 +138,3 @@
 			@content;
 	}
 }
-
-// Define the property for box-sizing
-@mixin box-sizing($bs) {
-	-webkit-box-sizing: $bs;
-	box-sizing: $bs;
-}

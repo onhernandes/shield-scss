@@ -1,1 +1,7 @@
 /*----------BASIC MIXINS----------*/
+
+/* box-sizing */
+@mixin box-sizing($bs) {
+	-webkit-box-sizing: $bs;
+	box-sizing: $bs;
+}

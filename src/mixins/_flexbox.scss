@@ -1,5 +1,7 @@
 /*----------FLEXBOX MIXINS----------*/
 
+/*---FLEX CONTAINER---*/
+
 /*
 	Name: display-flex
 	Trigger: df()
@@ -83,6 +85,9 @@
 	@include align-items($align-items);
 	@include align-content($align-content);
 }
+
+
+/*---FLEX ITEM---*/
 
 /*
 	Name: flex-item
