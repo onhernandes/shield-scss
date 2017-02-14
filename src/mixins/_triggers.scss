@@ -59,3 +59,8 @@
 @mixin fxs($shrink) {
 	@include flex-shrink($shrink);
 }
+
+/* short-hand for: box-sizing($bs) */
+@mixin bs($bs) {
+	@include box-sizing($bs);
+}

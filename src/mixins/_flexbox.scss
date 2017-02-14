@@ -14,7 +14,7 @@
 
 /*
 	Name: flex-flow
-	Trigger: ff()
+	Trigger: ff($flow)
 */
 @mixin flex-flow($flow) {
 	-webkit-flex-flow: $flow;
@@ -34,7 +34,7 @@
 
 /*
 	Name: flex-container
-	Trigger: fc()
+	Trigger: fc($flow, $inline)
 */
 @mixin flex-container($flow, $inline: false) {
 	@if $inline == true {
@@ -48,7 +48,7 @@
 
 /*
 	Name: justify-content
-	Trigger: jc()
+	Trigger: jc($align)
 */
 @mixin justify-content($align) {
 	-webkit-justify-content: $align;
@@ -58,7 +58,7 @@
 
 /*
 	Name: align-items
-	Trigger: ai()
+	Trigger: ai($align)
 */
 @mixin align-items($align) {
 	-webkit-align-items: $align;
@@ -68,7 +68,7 @@
 
 /*
 	Name: align-content
-	Trigger: ac()
+	Trigger: ac($align)
 */
 @mixin align-content($align) {
 	-webkit-align-content: $align;
@@ -78,7 +78,7 @@
 
 /*
 	Name: flex-align
-	Trigger: fa()
+	Trigger: fa($justify-content, $align-items, $align-content)
 */
 @mixin flex-align($justify-content, $align-items, $align-content) {
 	@include justify-content($justify-content);
@@ -91,7 +91,7 @@
 
 /*
 	Name: flex
-	Trigger: fx()
+	Trigger: fx($flex)
 */
 @mixin flex($flex) {
 	-webkit-flex: $flex;
@@ -101,7 +101,7 @@
 
 /*
 	Name: align-self
-	Trigger: as()
+	Trigger: as($align)
 */
 @mixin align-self($align) {
 	-webkit-align-self: $align;
@@ -111,7 +111,7 @@
 
 /*
 	Name: flex-grow
-	Trigger: fxg()
+	Trigger: fxg($grow)
 */
 @mixin flex-grow($grow) {
 	-webkit-flex-grow: $grow;
@@ -121,7 +121,7 @@
 
 /*
 	Name: flex-shrink
-	Trigger: fxs()
+	Trigger: fxs($shrink)
 */
 @mixin flex-shrink($shrink) {
 	-webkit-flex-shrink: $shrink;

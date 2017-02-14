@@ -1,6 +1,9 @@
 /*----------BASIC MIXINS----------*/
 
-/* box-sizing */
+/*
+	Name: box-sizing
+	Trigger: bs($bs)
+*/
 @mixin box-sizing($bs) {
 	-webkit-box-sizing: $bs;
 	box-sizing: $bs;
