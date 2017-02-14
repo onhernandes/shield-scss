@@ -90,11 +90,41 @@
 /*---FLEX ITEM---*/
 
 /*
-	Name: flex-item
-	Trigger: fi()
+	Name: flex
+	Trigger: fx()
 */
-@mixin flex-item($flex) {
+@mixin flex($flex) {
 	-webkit-flex: $flex;
 	-ms-flex: $flex;
 	flex: $flex;
+}
+
+/*
+	Name: align-self
+	Trigger: as()
+*/
+@mixin align-self($align) {
+	-webkit-align-self: $align;
+	-ms-align-self: $align;
+	align-self: $align;
+}
+
+/*
+	Name: flex-grow
+	Trigger: fxg()
+*/
+@mixin flex-grow($grow) {
+	-webkit-flex-grow: $grow;
+	-ms-flex-grow: $grow;
+	flex-grow: $grow;
+}
+
+/*
+	Name: flex-shrink
+	Trigger: fxs()
+*/
+@mixin flex-shrink($shrink) {
+	-webkit-flex-shrink: $shrink;
+	-ms-flex-shrink: $shrink;
+	flex-shrink: $shrink;
 }

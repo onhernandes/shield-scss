@@ -39,3 +39,23 @@
 @mixin fa($jc, $ai, $ac) {
 	@include flex-align($jc, $ai, $ac);
 }
+
+/* short-hand for: flex($flex) */
+@mixin fx($flex) {
+	@include flex($flex);
+}
+
+/* short-hand for: align-self($align) */
+@mixin as($align) {
+	@include align-self($align);
+}
+
+/* short-hand for: flex-grow($grow) */
+@mixin fxg($grow) {
+	@include flex-grow($grow);
+}
+
+/* short-hand for: flex-shrink($shrink) */
+@mixin fxs($shrink) {
+	@include flex-shrink($shrink);
+}
