@@ -1,13 +1,21 @@
 /*----------MOTION MIXINS----------*/
 
-// Define the property for transition
+/*
+	Name: transition
+	Trigger: trs($trs)
+	Return transition
+*/
 @mixin transition($transition) {
 	-webkit-transition: $transition;
 	-o-transition: $transition;
 	transition: $transition;
 }
 
-// Define the property for transform
+/*
+	Name: transform
+	Trigger: trf($trf)
+	Return transform
+*/
 @mixin transform($transform) {
 	-webkit-transform: $transform;
 	-ms-transform: $transform;

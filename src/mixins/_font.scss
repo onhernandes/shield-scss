@@ -1,16 +1,28 @@
 /*----------FONT MIXINS----------*/
 
-/* return font-size using $font-size map */
+/*
+	Name: font-size
+	Trigger: fz($fz)
+	Return font-size
+*/
 @mixin font-size($size) {	
 	font-size: getFontSize($size);
 }
 
-/* return font-family using $font-family map */
+/*
+	Name: font-family
+	Trigger: ff($font-family)
+	Return font-family
+*/
 @mixin font-family($family, $type: sans) {	
 	font-family: getFontFamily($family), getFontType($type);
 }
 
-/* return headers like h1, h2 and more */
+/*
+	Name: header-tags
+	Trigger: ht()
+	Return headers like h1, h2 and more
+*/
 @mixin header-tags() {
 	@each $h, $val in $headers {
 		.#{$h} {

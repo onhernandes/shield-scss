@@ -1,6 +1,13 @@
 /*----------STRUCTURE MIXINS----------*/
 
-/* media-query with max-width */
+
+/*---COMMOM MEDIA MIXIN---*/
+
+/*
+	Name: media-max
+	Trigger: mdmax($breakpoint)
+	Return media screen and (max-width)
+*/
 @mixin media-max($breakpoint) {
 	@if hasKey($devices, $breakpoint) {
 		@media screen and (max-width: $breakpoint) {
@@ -9,9 +16,14 @@
 	}
 
 	@warn 'This breakpoint doesn\'t exist on $devices';
+	@return null;
 }
 
-/* media-query with min-width */
+/*
+	Name: media-min
+	Trigger: mdmin($breakpoint)
+	Return media screen and (min-width)
+*/
 @mixin media-min($breakpoint) {
 	@if hasKey($devices, $breakpoint) {
 		@media screen and (min-width: $breakpoint) {
@@ -20,9 +32,14 @@
 	}
 
 	@warn 'This breakpoint doesn\'t exist on $devices';
+	@return null;
 }
 
-/* media-query with min-width */
+/*
+	Name: media-between
+	Trigger: mdbet($min, $max)
+	Return media screen betwenn $min and $max
+*/
 @mixin media-between($min, $max) {
 	@if hasKey($devices, $min) and hasKey($devices, $max) {
 		@media (min-width: $min) and (max-width: $max) {
@@ -31,9 +48,17 @@
 	}
 
 	@warn 'These breakpoints doesn\'t exist on $devices';
+	@return null;
 }
 
-/* media-query with min-width */
+
+/*---MIN WIDTH---*/
+
+/*
+	Name: min-laptop
+	Trigger: mnlap
+	Return media screen and (min-width: laptop)
+*/
 @mixin min-laptop {
 	@if hasKey($devices, laptop) {
 		@media screen and (min-width: getDevice(laptop)) {
@@ -42,9 +67,14 @@
 	}
 
 	@warn 'laptop breakpoint doesn\'t exist on $devices';
+	@return null;
 }
 
-/* media-query with min-width */
+/*
+	Name: min-desktop
+	Trigger: mndk
+	Return media screen and (min-width: desktop)
+*/
 @mixin min-desktop {
 	@if hasKey($devices, desktop) {
 		@media screen and (min-width: getDevice(desktop)) {
@@ -53,9 +83,14 @@
 	}
 
 	@warn 'desktop breakpoint doesn\'t exist on $devices';
+	@return null;
 }
 
-/* media-query with min-width */
+/*
+	Name: min-tablet
+	Trigger: mntbt
+	Return media screen and (min-width: tablet)
+*/
 @mixin min-tablet {
 	@if hasKey($devices, tablet) {
 		@media screen and (min-width: getDevice(tablet)) {
@@ -64,9 +99,14 @@
 	}
 
 	@warn 'tablet breakpoint doesn\'t exist on $devices';
+	@return null;
 }
 
-/* media-query with min-width */
+/*
+	Name: min-phone
+	Trigger: mnpn
+	Return media screen and (min-width: phone)
+*/
 @mixin min-phone {
 	@if hasKey($devices, phone) {
 		@media screen and (min-width: getDevice(phone)) {
@@ -75,9 +115,17 @@
 	}
 
 	@warn 'phone breakpoint doesn\'t exist on $devices';
+	@return null;
 }
 
-/* media-query with max-width */
+
+/*---MAX WIDTH---*/
+
+/*
+	Name: max-laptop
+	Trigger: mxlap
+	Return media screen and (max-width: laptop)
+*/
 @mixin max-laptop {
 	@if hasKey($devices, laptop) {
 		@media screen and (max-width: getDevice(laptop)) {
@@ -86,9 +134,14 @@
 	}
 
 	@warn 'laptop breakpoint doesn\'t exist on $devices';
+	@return null;
 }
 
-/* media-query with max-width */
+/*
+	Name: max-desktop
+	Trigger: mxdk
+	Return media screen and (max-width: desktop)
+*/
 @mixin max-desktop {
 	@if hasKey($devices, desktop) {
 		@media screen and (max-width: getDevice(desktop)) {
@@ -97,9 +150,14 @@
 	}
 
 	@warn 'desktop breakpoint doesn\'t exist on $devices';
+	@return null;
 }
 
-/* media-query with max-width */
+/*
+	Name: max-tablet
+	Trigger: mxtbt
+	Return media screen and (max-width: tablet)
+*/
 @mixin max-tablet {
 	@if hasKey($devices, tablet) {
 		@media screen and (max-width: getDevice(tablet)) {
@@ -108,9 +166,14 @@
 	}
 
 	@warn 'tablet breakpoint doesn\'t exist on $devices';
+	@return null;
 }
 
-/* media-query with max-width */
+/*
+	Name: max-phone
+	Trigger: mxpn
+	Return media screen and (max-width: phone)
+*/
 @mixin max-phone {
 	@if hasKey($devices, phone) {
 		@media screen and (max-width: getDevice(phone)) {
@@ -119,16 +182,31 @@
 	}
 
 	@warn 'phone breakpoint doesn\'t exist on $devices';
+	@return null;
 }
 
-/* media-query for print */
+
+/*---PRINT---*/
+
+/*
+	Name: print
+	Trigger: mpnt
+	Return media print
+*/
 @mixin media-print {
 	@media print {
 		@content;
 	}
 }
 
-/* media-query for retina */
+
+/*---RETINA---*/
+
+/*
+	Name: retina
+	Trigger: mret
+	Return media only screen and (device-pixel-ratio) / (min-resolution) 
+*/
 @mixin retina {
 	@media only screen and (-webkit-min-device-pixel-ratio: 2),
 		only screen and (-o-min-device-pixel-ratio: 2/1),

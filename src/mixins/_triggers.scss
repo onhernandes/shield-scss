@@ -1,5 +1,7 @@
 /*----------TRIGGERS----------*/
 
+/*---FLEXBOX---*/
+
 /* short-hand for: display-flex() */
 @mixin df() {
 	@include display-flex();
@@ -60,7 +62,11 @@
 	@include flex-shrink($shrink);
 }
 
+/*---BASIC MIXINS---*/
+
 /* short-hand for: box-sizing($bs) */
 @mixin bs($bs) {
 	@include box-sizing($bs);
 }
+
+/*---MEDIA-QUERIES MIXINS---*/
