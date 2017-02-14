@@ -1,6 +1,6 @@
 /*----------DEVICE SIZES----------*/
 
-$devices-standard: (
+$devices-initial: (
 	laptop: 1366px,
 	desktop: 1280px,
 	tablet: 1024px,
@@ -10,9 +10,9 @@ $devices-standard: (
 @if hasKeyVar(devices) {
 	$devices-custom: getVar(devices);
 	
-	$devices: merge($devices-standard, $devices-custom);
+	$devices: merge($devices-initial, $devices-custom);
 } @else {
-	$devices: $devices-standard;
+	$devices: $devices-initial;
 }
 
 @function getDevice($dev) {

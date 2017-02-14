@@ -21,14 +21,16 @@ $headers: (
 }
 
 /* sizes: desktop, tablet, phone */
+$font-size-initial: (
+	desktop: 16px,
+	tablet: 17px,
+	phone: 18px
+);
+
 @if hasKeyVar(font-size) {
-	$font-size: getVar(font-size);
+	$font-size: merge($font-size-initial, getVar(font-size));
 } @else {
-	$font-size: (
-		desktop: 16px,
-		tablet: 17px,
-		phone: 18px
-	);	
+	$font-size: $font-size-initial;	
 }
 
 /* return: font-size */
@@ -42,13 +44,15 @@ $headers: (
 }
 
 /* font-family */
+$font-family-initial: (
+	headers: 'Arial',
+	texts: 'Arial'
+);
+
 @if hasKeyVar(font-family) {
-	$font-family: getVar(font-family);
+	$font-family: merge($font-family-initial, getVar(font-family));
 } @else {	
-	$font-family: (
-		headers: 'Arial',
-		texts: 'Arial'
-	);
+	$font-family: $font-family-initial;
 }
 
 /* return: font-family */
