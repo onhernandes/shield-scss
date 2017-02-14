@@ -1,1 +1,20 @@
 /*----------LAYERS----------*/
+
+$z-index-initial: (
+	base: 0
+);
+
+@if hasKeyVar(z-index) {
+	$z-index: merge($z-index-initial, getVar(z-index));
+} @else {
+	$z-index: $z-index-initial;
+}
+
+@function getLayer($z) {
+	@if hasKey($z) {
+		@return get($z-index, $z);	
+	}
+
+	@warn 'this layer/z-index value does not exist';
+	@return null;
+}
