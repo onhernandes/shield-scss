@@ -147,3 +147,15 @@
 @mixin mret {
 	@include retina { @content; } 
 }
+
+/*---MOTION MIXINS---*/
+
+/* short-hand for: transition($trs); */
+@mixin trs($trs) {
+	@include transition($trs);
+}
+
+/* short-hand for: transform($trs); */
+@mixin trf($trs) {
+	@include transform($trs);
+}
