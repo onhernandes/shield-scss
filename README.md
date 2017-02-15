@@ -1,3 +1,5 @@
+![shield-base.jpg](Shield SCSS logo)
+
 # Shield SCSS
 
 Shield is a little library with the files that I use on my job/projects
