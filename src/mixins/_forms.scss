@@ -1,6 +1,10 @@
 /*----------FORM MIXINS----------*/
 
-// Generate input-placeholder CSS
+/*
+	Name: input-placeholder
+	Trigger: inpl($inpl)
+	Return placeholder custom
+*/
 @mixin input-placeholder($input) {
 	#{$input}::-webkit-input-placeholder {
 		@content;
@@ -18,3 +22,4 @@
 		@content;
 	}
 }
+

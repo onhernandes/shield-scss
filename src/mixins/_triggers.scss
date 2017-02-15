@@ -159,3 +159,10 @@
 @mixin trf($trs) {
 	@include transform($trs);
 }
+
+/*---MOTION MIXINS---*/
+
+/* short-hand for: input-placeholder($trs); */
+@mixin inpl($trs) {
+	@include input-placeholder($trs);
+}
