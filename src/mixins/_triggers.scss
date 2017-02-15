@@ -166,3 +166,27 @@
 @mixin inpl($trs) {
 	@include input-placeholder($trs);
 }
+
+/*---FONT MIXINS---*/
+
+/* short-hand for: font-size($size); */
+@mixin fz($size) {
+	@include font-size($size);
+}
+
+/* short-hand for: font-family($trs); */
+@mixin ff($trs) {
+	@include font-family($trs);
+}
+
+/* short-hand for: header-tags(); */
+@mixin ht() {
+	@include header-tags();
+}
+
+/*---LAYERS MIXINS---*/
+
+/* short-hand for: z-index($z); */
+@mixin z($z) {
+	@include z-index($z);
+}
