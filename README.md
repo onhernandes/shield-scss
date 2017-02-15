@@ -1,4 +1,4 @@
-![shield-base.jpg](Shield SCSS logo)
+![Shield SCSS logo](shield-base.jpg)
 
 # Shield SCSS
 
