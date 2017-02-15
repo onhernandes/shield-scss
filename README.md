@@ -22,6 +22,10 @@ Shield is a little library with the files that I use on my job/projects
 1. `_triggers.scss` are short-hand for mixins(i.e the short-hand for `flex-flow()` is `fx-fw()` or I don't know, change as you want to), they are highly compatible with emmets short-hands so if you use emmet this is easy
 1. You can't override existing functions and mixins.
 
+## Problems, issues, questions...
+
+Whatever, just open an [issue](https://github.com/mhernandes/shield-scss/issues) and let's talk bro.
+
 ## Why do not I store all of the variables in a separate file?
 
 Just because having to open another file and keep looking at him just for check variables and maps are painful. It is easier just edit one file.
