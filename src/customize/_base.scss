@@ -1,46 +1,51 @@
-/* 
-It is a super map with all of the variables and other maps being used, just include what you really wanna change.
+// It is a super map with all of the variables and other maps being used, just include what you really wanna change.
 
-Example
+// Example
 
-$font-family: (
-	lorem: 'ipsum'
-);
+// $font-family: (
+// 	lorem: 'ipsum'
+// );
 
-$variables: (
-	font-family: $font-family,
-);
+// $variables: (
+// 	font-family: $font-family,
+// );
 
-Variables/maps for use
+// OR
 
-FONT STYLES
+// $variables: (
+// 	font-family: (
+// 		font: 'here'
+// 	),
+// );
 
-$font-family: (
-	headers: 'Arial',
-	texts: 'Arial'
-);
+// Variables/maps for use
 
-$font-size: (
-	desktop: 16px,
-	tablet: 17px,
-	phone: 18px	
-);
+// FONT STYLES
 
-STRUCTURE AND DEVICES STYLES
+// $font-family: (
+// 	headers: 'Arial',
+// 	texts: 'Arial'
+// );
 
-$devices: (
-	laptop: 1366px,
-	desktop: 1280px,
-	tablet: 1024px,
-	phone: 760px
-);
+// $font-size: (
+// 	desktop: 16px,
+// 	tablet: 17px,
+// 	phone: 18px	
+// );
 
-Z-INDEX - FOR LAYERS
+// STRUCTURE AND DEVICES STYLES
 
-$z-index: (
-	base: 0
-);
+// $devices: (
+// 	laptop: 1366px,
+// 	desktop: 1280px,
+// 	tablet: 1024px,
+// 	phone: 760px
+// );
 
-*/
+// Z-INDEX - FOR LAYERS
+
+// $z-index: (
+// 	base: 0
+// );
 
 $variables: ();

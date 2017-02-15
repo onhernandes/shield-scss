@@ -1,16 +1,16 @@
-/*----------HELPERS----------*/
+//----------HELPERS----------//
 
-/* camelCase for map-get() */
+// camelCase for map-get()
 @function get($map, $val) {
 	@return map-get($map, $val);
 }
 
-/* get $variables map or var */
+// get $variables map or var
 @function getVar($var) {
 	@return get($variables, $var);
 }
 
-/* camelCase for map-has-key() */
+// camelCase for map-has-key()
 @function hasKey($map, $key) {
 	@if map-has-key($map, $key) {
 		@return true;
@@ -19,7 +19,7 @@
 	}
 }
 
-/* camelCase for map-has-key() based on $variables */
+// camelCase for map-has-key() based on $variables
 @function hasKeyVar($key) {
 	@if hasKey($variables, $key) {
 		@return true;
@@ -28,12 +28,12 @@
 	}
 }
 
-/* camelCase for map-merge() */
+// camelCase for map-merge()
 @function merge($map1, $map2) {
 	@return map-merge($map1, $map2);
 }
 
-/* recursive map-merge(), thanks to sitepoint.com */
+// recursive map-merge(), thanks to sitepoint.com
 @function mapExtend($map, $maps.../*, $deep */) {
 	$last: nth($maps, -1);
 	$deep: $last == true;

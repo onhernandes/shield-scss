@@ -1,10 +1,8 @@
-/*----------BASIC MIXINS----------*/
+//----------BASIC MIXINS----------//
 
-/*
-	Name: box-sizing
-	Trigger: bs($bs)
-	Return box-sizing
-*/
+// 	Name: box-sizing
+// 	Trigger: bs($bs)
+// 	Return box-sizing
 @mixin box-sizing($bs) {
 	-webkit-box-sizing: $bs;
 	box-sizing: $bs;

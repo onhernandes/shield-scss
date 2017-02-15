@@ -1,6 +1,6 @@
-/*----------FONT STYLES----------*/
+//----------FONT STYLES----------//
 
-/* h1, h2, h3.. */
+// h1, h2, h3..
 $headers: (
 	h1: 32px,
 	h2: 24px,
@@ -10,7 +10,7 @@ $headers: (
 	h6: 11px
 );
 
-/* return: specified $header */
+// return: specified $header
 @function getHeader($h) {
 	@if hasKey($headers, $h) {
 		@return get($headers, $h);
@@ -20,8 +20,8 @@ $headers: (
 	@return null;
 }
 
-/* sizes: desktop, tablet, phone */
-$font-size-initial: (
+// sizes: desktop, tablet, phone
+$font-size: (
 	desktop: 16px,
 	tablet: 17px,
 	phone: 18px
@@ -29,11 +29,9 @@ $font-size-initial: (
 
 @if hasKeyVar(font-size) {
 	$font-size: merge($font-size-initial, getVar(font-size));
-} @else {
-	$font-size: $font-size-initial;	
 }
 
-/* return: font-size */
+// return: font-size
 @function getFontSize($size) {
 	@if hasKey($font-size, $size) {
 		@return get($font-size, $size);
@@ -43,19 +41,17 @@ $font-size-initial: (
 	@return null;
 }
 
-/* font-family */
-$font-family-initial: (
+// font-family
+$font-family: (
 	headers: 'Arial',
 	texts: 'Arial'
 );
 
 @if hasKeyVar(font-family) {
 	$font-family: merge($font-family-initial, getVar(font-family));
-} @else {	
-	$font-family: $font-family-initial;
 }
 
-/* return: font-family */
+// return: font-family
 @function getFontFamily($fm) {
 	@if hasKey($font-family, $fm) {
 		@return get($font-family, $fm);
@@ -65,13 +61,13 @@ $font-family-initial: (
 	@return null;
 }
 
-/* font-type */
+// font-type
 $font-type: (
 	serif: 'serif',
 	sans: 'sans-serif'
 );
 
-/* return: font-type */
+// return: font-type
 @function getFontType($fm) {
 	@if hasKey($font-type, $fm) {
 		@return get($font-type, $fm);

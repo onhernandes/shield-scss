@@ -1,17 +1,15 @@
-/*----------LAYERS----------*/
+//----------LAYERS----------//
 
-$z-index-initial: (
+$z-index: (
 	base: 0
 );
 
 @if hasKeyVar(z-index) {
 	$z-index: merge($z-index-initial, getVar(z-index));
-} @else {
-	$z-index: $z-index-initial;
 }
 
 @function getLayer($z) {
-	@if hasKey($z) {
+	@if hasKey($z-index, $z) {
 		@return get($z-index, $z);	
 	}
 

@@ -1,192 +1,192 @@
-/*----------TRIGGERS----------*/
+//----------TRIGGERS----------//
 
-/*---FLEXBOX---*/
+//---FLEXBOX---//
 
-/* short-hand for: display-flex() */
+// short-hand for: display-flex()
 @mixin df() {
 	@include display-flex();
 }
 
-/* short-hand for: flex-flow($flow) */
+// short-hand for: flex-flow($flow)
 @mixin ff($flow) {
 	@include flex-flow($flow);
 }
 
-/* short-hand for: inline-flex() */
+// short-hand for: inline-flex()
 @mixin inf() {
 	@include inline-flex();
 }
 
-/* short-hand for: flex-container() */
+// short-hand for: flex-container()
 @mixin fc($flow, $inline: false) {
 	@include flex-container($flow, $inline);
 }
 
-/* short-hand for: justify-content($align) */
+// short-hand for: justify-content($align)
 @mixin jc($align) {
 	@include justify-content($align);
 }
 
-/* short-hand for: align-items($align) */
+// short-hand for: align-items($align)
 @mixin ai($align) {
 	@include align-items($align);
 }
 
-/* short-hand for: align-content($align) */
+// short-hand for: align-content($align)
 @mixin ac() {
 	@include align-content($align);
 }
 
-/* short-hand for: flex-align($jc, $ai, $ac) */
+// short-hand for: flex-align($jc, $ai, $ac)
 @mixin fa($jc, $ai, $ac) {
 	@include flex-align($jc, $ai, $ac);
 }
 
-/* short-hand for: flex($flex) */
+// short-hand for: flex($flex)
 @mixin fx($flex) {
 	@include flex($flex);
 }
 
-/* short-hand for: align-self($align) */
+// short-hand for: align-self($align)
 @mixin as($align) {
 	@include align-self($align);
 }
 
-/* short-hand for: flex-grow($grow) */
+// short-hand for: flex-grow($grow)
 @mixin fxg($grow) {
 	@include flex-grow($grow);
 }
 
-/* short-hand for: flex-shrink($shrink) */
+// short-hand for: flex-shrink($shrink)
 @mixin fxs($shrink) {
 	@include flex-shrink($shrink);
 }
 
-/* short-hand for: flex-basis($basis) */
+// short-hand for: flex-basis($basis)
 @mixin fxb($basis) {
 	@include flex-basis($basis);
 }
 
-/*---BASIC MIXINS---*/
+//---BASIC MIXINS---//
 
-/* short-hand for: box-sizing($bs) */
+// short-hand for: box-sizing($bs)
 @mixin bs($bs) {
 	@include box-sizing($bs);
 }
 
-/*---MEDIA-QUERIES MIXINS---*/
-/*---BASIC MEDIA-QUERIES MIXINS---*/
+//---MEDIA-QUERIES MIXINS---//
+//---BASIC MEDIA-QUERIES MIXINS---//
 
-/* short-hand for: media-max($bk) */
+// short-hand for: media-max($bk)
 @mixin mdmax($bk) {
 	@include media-max($bk);
 }
 
-/* short-hand for: media-min($bk) */
+// short-hand for: media-min($bk)
 @mixin mdmin($bk) {
 	@include media-min($bk);
 }
 
-/* short-hand for: media-between($min, $max) */
+// short-hand for: media-between($min, $max)
 @mixin mdbet($min, $max) {
 	@include media-between($min, $max);
 }
 
-/*---MIN WIDTH MEDIA-QUERIES MIXINS---*/
+//---MIN WIDTH MEDIA-QUERIES MIXINS---//
 
-/* short-hand for: min-laptop { @content } */
+// short-hand for: min-laptop { @content }
 @mixin mnlap {
 	@include min-laptop { @content; } 
 }
 
-/* short-hand for: min-desktop { @content } */
+// short-hand for: min-desktop { @content }
 @mixin mndk {
 	@include min-desktop { @content; } 
 }
 
-/* short-hand for: min-tablet { @content } */
+// short-hand for: min-tablet { @content }
 @mixin mntbt {
 	@include min-tablet { @content; } 
 }
 
-/* short-hand for: min-phone { @content } */
+// short-hand for: min-phone { @content }
 @mixin mnpn {
 	@include min-phone { @content; } 
 }
 
-/*---MAX WIDTH MEDIA-QUERIES MIXINS---*/
+//---MAX WIDTH MEDIA-QUERIES MIXINS---//
 
-/* short-hand for: max-laptop { @content } */
+// short-hand for: max-laptop { @content }
 @mixin mxlap {
 	@include max-laptop { @content; } 
 }
 
-/* short-hand for: max-desktop { @content } */
+// short-hand for: max-desktop { @content }
 @mixin mxdk {
 	@include max-desktop { @content; } 
 }
 
-/* short-hand for: max-tablet { @content } */
+// short-hand for: max-tablet { @content }
 @mixin mxtbt {
 	@include max-tablet { @content; } 
 }
 
-/* short-hand for: max-phone { @content } */
+// short-hand for: max-phone { @content }
 @mixin mxpn {
 	@include max-phone { @content; } 
 }
 
-/*---PRINT MEDIA-QUERIES MIXINS---*/
+//---PRINT MEDIA-QUERIES MIXINS---//
 
-/* short-hand for: media-print { @content } */
+// short-hand for: media-print { @content }
 @mixin mpnt {
 	@include media-print { @content; } 
 }
 
-/* short-hand for: retina { @content } */
+// short-hand for: retina { @content }
 @mixin mret {
 	@include retina { @content; } 
 }
 
-/*---MOTION MIXINS---*/
+//---MOTION MIXINS---//
 
-/* short-hand for: transition($trs); */
+// short-hand for: transition($trs);
 @mixin trs($trs) {
 	@include transition($trs);
 }
 
-/* short-hand for: transform($trs); */
+// short-hand for: transform($trs);
 @mixin trf($trs) {
 	@include transform($trs);
 }
 
-/*---MOTION MIXINS---*/
+//---MOTION MIXINS---//
 
-/* short-hand for: input-placeholder($trs); */
+// short-hand for: input-placeholder($trs);
 @mixin inpl($trs) {
 	@include input-placeholder($trs);
 }
 
-/*---FONT MIXINS---*/
+//---FONT MIXINS---//
 
-/* short-hand for: font-size($size); */
+// short-hand for: font-size($size);
 @mixin fz($size) {
 	@include font-size($size);
 }
 
-/* short-hand for: font-family($trs); */
+// short-hand for: font-family($trs);
 @mixin ff($trs) {
 	@include font-family($trs);
 }
 
-/* short-hand for: header-tags(); */
+// short-hand for: header-tags();
 @mixin ht() {
 	@include header-tags();
 }
 
-/*---LAYERS MIXINS---*/
+//---LAYERS MIXINS---//
 
-/* short-hand for: z-index($z); */
+// short-hand for: z-index($z);
 @mixin z($z) {
 	@include z-index($z);
 }

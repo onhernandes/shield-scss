@@ -1,10 +1,8 @@
-/*----------FORM MIXINS----------*/
+//----------FORM MIXINS----------//
 
-/*
-	Name: input-placeholder
-	Trigger: inpl($inpl)
-	Return placeholder custom
-*/
+//  Name: input-placeholder
+//  Trigger: inpl($inpl)
+// 	Return placeholder custom
 @mixin input-placeholder($input) {
 	#{$input}::-webkit-input-placeholder {
 		@content;
