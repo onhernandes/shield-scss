@@ -1,8 +1,8 @@
 .easy {
 	padding: 2% 5%;
 
-	@include flex-container(wrap row);
-	@include justify-content(space-between);
+	@include fc(wrap row);
+	@include jc(space-between);
 
 	&__line {
 		flex-basis: 100%;
@@ -11,7 +11,7 @@
 	}
 
 	&__code {
-		flex-basis: calc(90% / 2);
+		@include fxb(calc(90% / 2));
 
 		h2 {
 			padding: 8px;

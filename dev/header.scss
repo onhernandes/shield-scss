@@ -1,12 +1,12 @@
 .header {
 	padding: 5% 0;
-	background-color: darken(map-get($color-scheme, orange), 5%);
+	background-color: darken(get($color-scheme, orange), 5%);
 
-	@include flex-container(wrap row);
-	@include justify-content(center);
+	@include fc(wrap row);
+	@include jc(center);
 
 	img, h1, p {
-		@include flex-item(0 0 auto);
+		@include fx(0 0 auto);
 		text-align: center;
 	}
 
