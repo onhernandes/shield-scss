@@ -5,7 +5,7 @@ $z-index: (
 );
 
 @if hasKeyVar(z-index) {
-	$z-index: merge($z-index-initial, getVar(z-index));
+	$z-index: merge($z-index, getVar(z-index));
 }
 
 @function getLayer($z) {

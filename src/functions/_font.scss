@@ -28,7 +28,7 @@ $font-size: (
 );
 
 @if hasKeyVar(font-size) {
-	$font-size: merge($font-size-initial, getVar(font-size));
+	$font-size: merge($font-size, getVar(font-size));
 }
 
 // return: font-size
@@ -48,7 +48,7 @@ $font-family: (
 );
 
 @if hasKeyVar(font-family) {
-	$font-family: merge($font-family-initial, getVar(font-family));
+	$font-family: merge($font-family, getVar(font-family));
 }
 
 // return: font-family
