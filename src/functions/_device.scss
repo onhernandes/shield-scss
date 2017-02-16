@@ -10,14 +10,14 @@ $devices: (
 @if hasKeyVar(devices) {
 	$devices-custom: getVar(devices);
 	
-	$devices: merge($devices, $devices-custom);
+	$devices: merge($device, $devices-custom);
 }
 
 @function getDevice($dev) {
 	@if hasKey($devices, $dev) {
 		@return get($devices, $dev);
+	} @else {
+		@warn 'This device size does not exists';
+		@return null;
 	}
-
-	@warn 'This device size does not exists';
-	@return null;
 }

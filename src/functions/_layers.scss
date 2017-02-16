@@ -11,8 +11,8 @@ $z-index: (
 @function getLayer($z) {
 	@if hasKey($z-index, $z) {
 		@return get($z-index, $z);	
+	} @else {
+		@warn 'this layer/z-index value does not exist';
+		@return null;
 	}
-
-	@warn 'this layer/z-index value does not exist';
-	@return null;
 }

@@ -11,9 +11,9 @@
 		@media screen and (max-width: $breakpoint) {
 			@content;
 		}
+	} @else {
+		@warn 'This breakpoint doesn\'t exist on $devices';
 	}
-
-	@warn 'This breakpoint doesn\'t exist on $devices';
 }
 
 // 	Name: media-min
@@ -24,9 +24,9 @@
 		@media screen and (min-width: $breakpoint) {
 			@content;
 		}
+	} @else {
+		@warn 'This breakpoint doesn\'t exist on $devices';
 	}
-
-	@warn 'This breakpoint doesn\'t exist on $devices';
 }
 
 // 	Name: media-between
@@ -37,9 +37,9 @@
 		@media (min-width: $min) and (max-width: $max) {
 			@content;
 		}
+	} @else {
+		@warn 'These breakpoints doesn\'t exist on $devices';
 	}
-
-	@warn 'These breakpoints doesn\'t exist on $devices';
 }
 
 
@@ -53,9 +53,9 @@
 		@media screen and (min-width: getDevice(laptop)) {
 			@content;
 		}
+	} @else {
+		@warn 'laptop breakpoint doesn\'t exist on $devices';
 	}
-
-	@warn 'laptop breakpoint doesn\'t exist on $devices';
 }
 
 // 	Name: min-desktop
@@ -66,9 +66,9 @@
 		@media screen and (min-width: getDevice(desktop)) {
 			@content;
 		}
+	} @else {
+		@warn 'desktop breakpoint doesn\'t exist on $devices';
 	}
-
-	@warn 'desktop breakpoint doesn\'t exist on $devices';
 }
 
 // 	Name: min-tablet
@@ -79,9 +79,9 @@
 		@media screen and (min-width: getDevice(tablet)) {
 			@content;
 		}
+	} @else {
+		@warn 'tablet breakpoint doesn\'t exist on $devices';
 	}
-
-	@warn 'tablet breakpoint doesn\'t exist on $devices';
 }
 
 // 	Name: min-phone
@@ -92,9 +92,9 @@
 		@media screen and (min-width: getDevice(phone)) {
 			@content;
 		}
+	} @else {
+		@warn 'phone breakpoint doesn\'t exist on $devices';
 	}
-
-	@warn 'phone breakpoint doesn\'t exist on $devices';
 }
 
 
@@ -108,9 +108,9 @@
 		@media screen and (max-width: getDevice(laptop)) {
 			@content;
 		}
+	} @else {
+		@warn 'laptop breakpoint doesn\'t exist on $devices';
 	}
-
-	@warn 'laptop breakpoint doesn\'t exist on $devices';
 }
 
 // 	Name: max-desktop
@@ -121,9 +121,9 @@
 		@media screen and (max-width: getDevice(desktop)) {
 			@content;
 		}
+	} @else {
+		@warn 'desktop breakpoint doesn\'t exist on $devices';
 	}
-
-	@warn 'desktop breakpoint doesn\'t exist on $devices';
 }
 
 // 	Name: max-tablet
@@ -134,9 +134,9 @@
 		@media screen and (max-width: getDevice(tablet)) {
 			@content;
 		}
+	} @else {
+		@warn 'tablet breakpoint doesn\'t exist on $devices';
 	}
-
-	@warn 'tablet breakpoint doesn\'t exist on $devices';
 }
 
 // 	Name: max-phone
@@ -147,9 +147,9 @@
 		@media screen and (max-width: getDevice(phone)) {
 			@content;
 		}
+	} @else {
+		@warn 'phone breakpoint doesn\'t exist on $devices';
 	}
-
-	@warn 'phone breakpoint doesn\'t exist on $devices';
 }
 
 
