@@ -1,4 +1,4 @@
-@import 'customize/_base',
+@import '_base',
 		'functions/_helpers',
 		'functions/_color',
 		'functions/_font',
@@ -12,6 +12,6 @@
 		'mixins/_motion',
 		'mixins/_structure',
 		'mixins/_triggers',
-		'customize/_functions',
-		'customize/_mixins',
+		'_functions',
+		'_mixins',
 		'reset';
