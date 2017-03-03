@@ -1,0 +1,15 @@
+//----------MOTION MIXINS----------//
+
+// 	Name: transform
+// 	Short-hand: trf($trf)
+// 	Return transform
+@mixin transform($transform) {
+	-webkit-transform: $transform;
+	-ms-transform: $transform;
+	transform: $transform;
+}
+
+// short-hand
+@mixin trf($trs) {
+	@include transform($trs);
+}

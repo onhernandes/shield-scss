@@ -1,7 +1,7 @@
 //----------MOTION MIXINS----------//
 
 // 	Name: transition
-// 	Trigger: trs($trs)
+// 	Short-hand: trs($trs)
 // 	Return transition
 @mixin transition($transition) {
 	-webkit-transition: $transition;
@@ -9,11 +9,7 @@
 	transition: $transition;
 }
 
-// 	Name: transform
-// 	Trigger: trf($trf)
-// 	Return transform
-@mixin transform($transform) {
-	-webkit-transform: $transform;
-	-ms-transform: $transform;
-	transform: $transform;
+// short-hand
+@mixin trs($trs) {
+	@include transition($trs);
 }
