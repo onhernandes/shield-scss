@@ -1,0 +1,15 @@
+//---FLEX CONTAINER---//
+
+// 	Name: display-flex
+// 	Short-hand: df()
+// 	Return display: flex;
+@mixin display-flex() {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+}
+
+// short-hand
+@mixin df() {
+	@include display-flex();
+}

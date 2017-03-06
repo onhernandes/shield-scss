@@ -1,0 +1,15 @@
+//---FLEX CONTAINER---//
+
+// 	Name: flex-align
+// 	Short-hand: fa($justify-content, $align-items, $align-content)
+// 	Return justify-content, align-items, align-content
+@mixin flex-align($justify-content, $align-items, $align-content) {
+	@include justify-content($justify-content);
+	@include align-items($align-items);
+	@include align-content($align-content);
+}
+
+// short-hand
+@mixin fa($jc, $ai, $ac) {
+	@include flex-align($jc, $ai, $ac);
+}

@@ -1,0 +1,19 @@
+//---FLEX CONTAINER---//
+
+// 	Name: flex-container
+// 	Short-hand: fc($flow, $inline)
+// 	Return display: inline/flex and flex-flow
+@mixin flex-container($flow, $inline: false) {
+	@if $inline == true {
+		@include inline-flex();
+	} @else {
+		@include display-flex();	
+	}
+
+	@include flex-flow($flow);
+}
+
+// short-hand
+@mixin fc($flow, $inline: false) {
+	@include flex-container($flow, $inline);
+}

@@ -1,0 +1,15 @@
+//---FLEX CONTAINER---//
+
+// 	Name: align-content
+// 	Short-hand: ac($align)
+// 	Return align-content
+@mixin align-content($align) {
+	-webkit-align-content: $align;
+	-ms-align-content: $align;
+	align-content: $align;	
+}
+
+// short-hand 
+@mixin ac($align) {
+	@include align-content($align);
+}

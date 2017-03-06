@@ -1,0 +1,15 @@
+//---FLEX ITEM---//
+
+// 	Name: flex-shrink
+// 	Short-hand: fxs($shrink)
+// 	Return flex-shrink
+@mixin flex-shrink($shrink) {
+	-webkit-flex-shrink: $shrink;
+	-ms-flex-shrink: $shrink;
+	flex-shrink: $shrink;
+}
+
+// short-hand 
+@mixin fxs($shrink) {
+	@include flex-shrink($shrink);
+}

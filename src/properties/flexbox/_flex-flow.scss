@@ -1,0 +1,15 @@
+//---FLEX CONTAINER---//
+
+// 	Name: flex-flow
+// 	Short-hand: ff($flow)
+// 	Return flex-flow
+@mixin flex-flow($flow) {
+	-webkit-flex-flow: $flow;
+	-ms-flex-flow: $flow;
+	flex-flow: $flow;
+}
+
+// short-hand 
+@mixin ff($flow) {
+	@include flex-flow($flow);
+}

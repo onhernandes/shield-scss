@@ -1,0 +1,15 @@
+//---FLEX CONTAINER---//
+
+// 	Name: align-items
+// 	Short-hand: ai($align)
+// 	Return align-items
+@mixin align-items($align) {
+	-webkit-align-items: $align;
+	-ms-align-items: $align;
+	align-items: $align;	
+}
+
+// short-hand 
+@mixin ai($align) {
+	@include align-items($align);
+}

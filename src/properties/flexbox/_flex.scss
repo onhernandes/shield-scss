@@ -1,0 +1,15 @@
+//---FLEX ITEM---//
+
+// 	Name: flex
+// 	Short-hand: fx($flex)
+// 	Return flex
+@mixin flex($flex) {
+	-webkit-flex: $flex;
+	-ms-flex: $flex;
+	flex: $flex;
+}
+
+// short-hand
+@mixin fx($flex) {
+	@include flex($flex);
+}

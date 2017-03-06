@@ -1,0 +1,15 @@
+//---FLEX CONTAINER---//
+
+// 	Name: justify-content
+// 	Short-hand: jc($align)
+// 	Return justify-content
+@mixin justify-content($align) {
+	-webkit-justify-content: $align;
+	-ms-justify-content: $align;
+	justify-content: $align;	
+}
+
+// short-hand 
+@mixin jc($align) {
+	@include justify-content($align);
+}

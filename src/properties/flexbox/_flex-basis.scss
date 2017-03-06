@@ -1,0 +1,15 @@
+//---FLEX ITEM---//
+
+// 	Name: flex-basis
+// 	Short-hand: fxb($basis)
+// 	Return flex-basis
+@mixin flex-basis($basis) {
+	-webkit-flex-basis: $basis;
+	-ms-flex-basis: $basis;
+	flex-basis: $basis;
+}
+
+// short-hand 
+@mixin fxb($basis) {
+	@include flex-basis($basis);
+}

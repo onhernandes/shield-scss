@@ -1,0 +1,15 @@
+//---FLEX ITEM---//
+
+// 	Name: flex-grow
+// 	Short-hand: fxg($grow)
+// 	Return flex-grow
+@mixin flex-grow($grow) {
+	-webkit-flex-grow: $grow;
+	-ms-flex-grow: $grow;
+	flex-grow: $grow;
+}
+
+// short-hand 
+@mixin fxg($grow) {
+	@include flex-grow($grow);
+}

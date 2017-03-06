@@ -1,0 +1,15 @@
+//---FLEX ITEM---//
+
+// 	Name: align-self
+// 	Short-hand: as($align)
+// 	Return align-self
+@mixin align-self($align) {
+	-webkit-align-self: $align;
+	-ms-align-self: $align;
+	align-self: $align;
+}
+
+// short-hand 
+@mixin as($align) {
+	@include align-self($align);
+}
