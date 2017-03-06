@@ -86,23 +86,6 @@
 	@include input-placeholder($trs);
 }
 
-//---FONT MIXINS---//
-
-// short-hand ;
-@mixin fz($size) {
-	@include font-size($size);
-}
-
-// short-hand ;
-@mixin ff($trs) {
-	@include font-family($trs);
-}
-
-// short-hand 
-@mixin ht() {
-	@include header-tags();
-}
-
 //---LAYERS MIXINS---//
 
 // short-hand ;

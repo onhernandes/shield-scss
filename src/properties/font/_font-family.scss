@@ -1,0 +1,49 @@
+//----------FONT----------//
+
+// font-family
+$font-family: (
+	heading: 'Arial',
+	text: 'Arial'
+);
+
+@if hasKeyVar(font-family) {
+	$font-family: merge($font-family, getVar(font-family));
+}
+
+// return: font-family
+@function getFontFamily($fm) {
+	@if hasKey($font-family, $fm) {
+		@return get($font-family, $fm);
+	} @else {
+		@warn "This family does not exists";
+		@return null;
+	}
+}
+
+// font-type
+$font-type: (
+	serif: 'serif',
+	sans: 'sans-serif'
+);
+
+// return: font-type
+@function getFontType($fm) {
+	@if hasKey($font-type, $fm) {
+		@return get($font-type, $fm);
+	} @else {
+		@warn "This serif does not exists";
+		@return null;
+	}
+}
+
+// 	Name: font-family
+// 	Short-hand: ff($font-family)
+// 	Return font-family
+@mixin font-family($family, $type: sans) {	
+	font-family: getFontFamily($family), getFontType($type);
+}
+
+// short-hand
+@mixin ff($trs) {
+	@include font-family($trs);
+}

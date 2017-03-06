@@ -1,0 +1,34 @@
+//----------FONT----------//
+
+// sizes: desktop, tablet, phone
+$font-size: (
+	desktop: 16px,
+	tablet: 17px,
+	phone: 18px
+);
+
+@if hasKeyVar(font-size) {
+	$font-size: merge($font-size, getVar(font-size));
+}
+
+// return: font-size
+@function getFontSize($size) {
+	@if hasKey($font-size, $size) {
+		@return get($font-size, $size);
+	} @else {
+		@warn "This size does not exists";
+		@return null;
+	}
+}
+
+// 	Name: font-size
+// 	Short-hand: fz($fz)
+// 	Return font-size
+@mixin font-size($size) {	
+	font-size: getFontSize($size);
+}
+
+// short-hand
+@mixin fz($size) {
+	@include font-size($size);
+}
