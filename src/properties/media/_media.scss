@@ -1,0 +1,79 @@
+//---MEDIA MIXIN---//
+
+//---DEVICE SIZES---//
+
+$devices: (
+	laptop: 1366px,
+	desktop: 1280px,
+	tablet: 1024px,
+	phone: 760px
+);
+
+@if hasKeyVar(devices) {
+	$devices-custom: getVar(devices);
+	
+	$devices: merge($device, $devices-custom);
+}
+
+@function getDevice($dev) {
+	@if hasKey($devices, $dev) {
+		@return get($devices, $dev);
+	} @else {
+		@warn 'This device size does not exists';
+		@return null;
+	}
+}
+
+// 	Name: media-max
+// 	Short-hand: m-max($breakpoint)
+// 	Return media screen and (max-width)
+@mixin media-max($breakpoint) {
+	@if hasKey($devices, $breakpoint) {
+		@media screen and (max-width: $breakpoint) {
+			@content;
+		}
+	} @else {
+		@warn 'This breakpoint doesn\'t exist on $devices';
+	}
+}
+
+// short-hand 
+@mixin m-max($bk) {
+	@include media-max($bk);
+}
+
+// 	Name: media-min
+// 	Short-hand: m-min($breakpoint)
+// 	Return media screen and (min-width)
+@mixin media-min($breakpoint) {
+	@if hasKey($devices, $breakpoint) {
+		@media screen and (min-width: $breakpoint) {
+			@content;
+		}
+	} @else {
+		@warn 'This breakpoint doesn\'t exist on $devices';
+	}
+}
+
+// short-hand 
+@mixin m-min($bk) {
+	@include media-min($bk);
+}
+
+// 	Name: media-between
+// 	Short-hand: m-bt($min, $max)
+// 	Return media screen betwenn $min and $max
+@mixin media-between($min, $max) {
+	@if hasKey($devices, $min) and hasKey($devices, $max) {
+		@media (min-width: $min) and (max-width: $max) {
+			@content;
+		}
+	} @else {
+		@warn 'These breakpoints doesn\'t exist on $devices';
+	}
+}
+
+// short-hand  $max)
+@mixin m-bt($min, $max) {
+	@include media-between($min, $max);
+}

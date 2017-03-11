@@ -1,0 +1,38 @@
+//---MEDIA MIXIN---//
+
+// 	Name: max-desktop
+// 	Short-hand: mad
+// 	Return media screen and (max-width: desktop)
+@mixin max-desktop {
+	@if hasKey($devices, desktop) {
+		@media screen and (max-width: getDevice(desktop)) {
+			@content;
+		}
+	} @else {
+		@warn 'desktop breakpoint doesn\'t exist on $devices';
+	}
+}
+
+// short-hand  }
+@mixin mad {
+	@include max-desktop { @content; } 
+}
+
+
+// 	Name: min-desktop
+// 	Short-hand: mid
+// 	Return media screen and (min-width: desktop)
+@mixin min-desktop {
+	@if hasKey($devices, desktop) {
+		@media screen and (min-width: getDevice(desktop)) {
+			@content;
+		}
+	} @else {
+		@warn 'desktop breakpoint doesn\'t exist on $devices';
+	}
+}
+
+// short-hand
+@mixin mid {
+	@include min-desktop { @content; } 
+}

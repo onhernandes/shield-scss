@@ -1,8 +1,30 @@
 //----------LAYERS----------//
 
+$z-index: (
+	base: 0
+);
+
+@if hasKeyVar(z-index) {
+	$z-index: merge($z-index, getVar(z-index));
+}
+
+@function getLayer($z) {
+	@if hasKey($z-index, $z) {
+		@return get($z-index, $z);	
+	} @else {
+		@warn 'this layer/z-index value does not exist';
+		@return null;
+	}
+}
+
 // 	Name: z-index
-// 	Trigger: z($z)
+// 	Short-hand: z($z)
 // 	Return z-index using $z-index map;
 @mixin z-index($z) {
 	z-index: getLayer($z);
+}
+
+// short-hand
+@mixin z($z) {
+	@include z-index($z);
 }

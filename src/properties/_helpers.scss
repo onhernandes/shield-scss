@@ -64,3 +64,8 @@
 
 	@return $map;
 }
+
+// return aspect ratio
+@function ratio($width, $height) {
+	@return $width / $height;
+}

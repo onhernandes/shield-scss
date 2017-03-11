@@ -1,7 +1,7 @@
 //----------FORM MIXINS----------//
 
 //  Name: input-placeholder
-//  Trigger: inpl($inpl)
+//  Short-hand: ip($ip)
 // 	Return placeholder custom
 @mixin input-placeholder($input) {
 	#{$input}::-webkit-input-placeholder {
@@ -21,3 +21,7 @@
 	}
 }
 
+// short-hand
+@mixin ip($trs) {
+	@include input-placeholder($trs);
+}

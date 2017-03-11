@@ -1,0 +1,12 @@
+// 	Name: clip-path
+// 	Short-hand: cp($clip)
+// 	Return clip-path
+@mixin clip-path($clip) {
+	-webkit-clip-path: $clip;
+	clip-path: $clip;
+}
+
+// short-hand 
+@mixin cp($clip) {
+	@include clip-path($clip);
+}

@@ -1,0 +1,35 @@
+// 	Name: max-phone
+// 	Short-hand: map
+// 	Return media screen and (max-width: phone)
+@mixin max-phone {
+	@if hasKey($devices, phone) {
+		@media screen and (max-width: getDevice(phone)) {
+			@content;
+		}
+	} @else {
+		@warn 'phone breakpoint doesn\'t exist on $devices';
+	}
+}
+
+// short-hand
+@mixin map {
+	@include max-phone { @content; } 
+}
+
+// 	Name: min-phone
+// 	Short-hand: mip
+// 	Return media screen and (min-width: phone)
+@mixin min-phone {
+	@if hasKey($devices, phone) {
+		@media screen and (min-width: getDevice(phone)) {
+			@content;
+		}
+	} @else {
+		@warn 'phone breakpoint doesn\'t exist on $devices';
+	}
+}
+
+// short-hand
+@mixin mip {
+	@include min-phone { @content; } 
+}

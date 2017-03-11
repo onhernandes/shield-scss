@@ -1,0 +1,33 @@
+//---MEDIA MIXIN---//
+
+// 	Name: print
+// 	Short-hand: mpt
+// 	Return media print
+@mixin media-print {
+	@media print {
+		@content;
+	}
+}
+
+// short-hand
+@mixin mpt {
+	@include media-print { @content; } 
+}
+
+// 	Name: retina
+// 	Short-hand: mret
+// 	Return media only screen and (device-pixel-ratio) / (min-resolution) 
+@mixin retina {
+	@media only screen and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (-o-min-device-pixel-ratio: 2/1),
+		only screen and (min-device-pixel-ratio: 2),
+		only screen and (min-resolution: 192dpi),
+		only screen and (min-resolution: 2dppx) { 
+			@content;
+	}
+}
+
+// short-hand
+@mixin mret {
+	@include retina { @content; } 
+}

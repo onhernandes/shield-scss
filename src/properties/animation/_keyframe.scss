@@ -1,0 +1,27 @@
+//----------MOTION MIXINS----------//
+
+// 	Name: keyframe
+// 	Short-hand: key
+// 	Return keyframe
+@mixin keyframe {
+	@-webkit-keyframes identifier {
+		@content;
+	}
+
+	@-o-keyframes identifier {
+		@content;
+	}
+
+	@-moz-keyframes identifier {
+		@content;
+	}
+
+	@keyframes identifier {
+		@content;
+	}
+}
+
+// short-hand
+@mixin key {
+	@include keyframe { @content; };
+}

@@ -1,9 +1,12 @@
-//----------BASIC MIXINS----------//
-
 // 	Name: box-sizing
-// 	Trigger: bs($bs)
+// 	Short-hand: bs($bs)
 // 	Return box-sizing
 @mixin box-sizing($bs) {
 	-webkit-box-sizing: $bs;
 	box-sizing: $bs;
+}
+
+// short-hand 
+@mixin bs($bs) {
+	@include box-sizing($bs);
 }

@@ -1,0 +1,37 @@
+//---MEDIA MIXIN---//
+
+// 	Name: max-laptop
+// 	Short-hand: mal
+// 	Return media screen and (max-width: laptop)
+@mixin max-laptop {
+	@if hasKey($devices, laptop) {
+		@media screen and (max-width: getDevice(laptop)) {
+			@content;
+		}
+	} @else {
+		@warn 'laptop breakpoint doesn\'t exist on $devices';
+	}
+}
+
+// short-hand
+@mixin mal {
+	@include max-laptop { @content; } 
+}
+
+// 	Name: min-laptop
+// 	Short-hand: mil
+// 	Return media screen and (min-width: laptop)
+@mixin min-laptop {
+	@if hasKey($devices, laptop) {
+		@media screen and (min-width: getDevice(laptop)) {
+			@content;
+		}
+	} @else {
+		@warn 'laptop breakpoint doesn\'t exist on $devices';
+	}
+}
+
+// short-hand
+@mixin mil {
+	@include min-laptop { @content; } 
+}

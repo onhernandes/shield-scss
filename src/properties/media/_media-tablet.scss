@@ -1,0 +1,37 @@
+//---MEDIA MIXIN---//
+
+// 	Name: min-tablet
+// 	Short-hand: mit
+// 	Return media screen and (min-width: tablet)
+@mixin min-tablet {
+	@if hasKey($devices, tablet) {
+		@media screen and (min-width: getDevice(tablet)) {
+			@content;
+		}
+	} @else {
+		@warn 'tablet breakpoint doesn\'t exist on $devices';
+	}
+}
+
+// short-hand
+@mixin mit {
+	@include min-tablet { @content; } 
+}
+
+// 	Name: max-tablet
+// 	Short-hand: mat
+// 	Return media screen and (max-width: tablet)
+@mixin max-tablet {
+	@if hasKey($devices, tablet) {
+		@media screen and (max-width: getDevice(tablet)) {
+			@content;
+		}
+	} @else {
+		@warn 'tablet breakpoint doesn\'t exist on $devices';
+	}
+}
+
+// short-hand
+@mixin mat {
+	@include max-tablet { @content; } 
+}
