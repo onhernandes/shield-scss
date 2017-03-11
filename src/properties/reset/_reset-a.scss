@@ -1,1 +1,15 @@
 //-----RESET-----//
+
+// Name reset-a
+// Desc reset a
+// Return 'a' reseted
+@mixin reset-a() {
+	background-color: transparent;
+	-webkit-text-decoration-skip: objects;
+	text-decoration: none;
+	
+	&:hover,
+	&:active {
+		outline-width: 0;
+	} 
+}
