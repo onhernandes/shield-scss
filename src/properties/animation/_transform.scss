@@ -10,6 +10,6 @@
 }
 
 // short-hand
-@mixin trf($trs) {
-	@include transform($trs);
+@mixin trf($trf) {
+	@include transform($trf);
 }

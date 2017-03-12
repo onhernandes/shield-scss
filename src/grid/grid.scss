@@ -1,0 +1,62 @@
+// use_flexbox: if use flex-box or commom width settings
+// breakpoint: if use min-width or max-width with breakpoint
+$grid-settings: (
+	use_flexbox: true,
+	breakpoint: 'min'
+);
+
+// container width and breakpoint values
+$grid-container-width: (
+	phone: 760px,
+	tablet: 1024px,
+	laptop: 1280px,
+	desktop: 1366px 
+);
+
+// gutter width
+$gutter: 30px;
+
+%grid-container {
+	width: get($grid-container-width, phone);
+	@include fc(wrap row);
+	@include jc(space-between);
+
+	@media screen and (min-width: get($grid-container-width, desktop)) { width: get($grid-container-width, desktop);	}
+	@media screen and (min-width: get($grid-container-width, laptop)) { width: get($grid-container-width, laptop);	}
+	@media screen and (min-width: get($grid-container-width, tablet)) { width: get($grid-container-width, tablet);	}
+}
+
+// Name getSize
+// Desc get column size
+// Return column size - $gutter
+@function getSize($w: 1/1) {
+	@return percentage($w) - $gutter;
+}
+
+%grid-one { @include flex-basis(getSize(1/1)); }
+
+%grid-one-half { @include flex-basis(getSize(1/2)); }
+
+%grid-one-third { @include flex-basis(getSize(1/3)); }
+
+%grid-two-thirds { @include flex-basis(getSize(2/3)); }
+
+%grid-one-quarter { @include flex-basis(getSize(1/4)); }
+
+%grid-two-quarter { @include flex-basis(getSize(2/4)); }
+
+%grid-three-quarter { @include flex-basis(getSize(3/4)); }
+
+
+// Name grid-container
+// Desc active grid as container
+@mixin grid-container() {
+	@extend %grid-container;
+}
+
+// Name grid
+// Desc set grid column
+// $amount = amount of columns size
+@mixin grid() {
+	@content;
+}
