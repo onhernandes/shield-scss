@@ -34,3 +34,22 @@ $heading: (
 @mixin h() {
 	@include header-tags();
 }
+
+
+// Name h1
+@mixin h1() { font-size: getHeader(h1); }
+
+// Name h2
+@mixin h2() { font-size: getHeader(h2); }
+
+// Name h3
+@mixin h3() { font-size: getHeader(h3); }
+
+// Name h4
+@mixin h4() { font-size: getHeader(h4); }
+
+// Name h5
+@mixin h5() { font-size: getHeader(h5); }
+
+// Name h6
+@mixin h6() { font-size: getHeader(h6); }

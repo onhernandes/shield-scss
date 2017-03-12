@@ -1,6 +1,6 @@
 // Reset
 
-* {
+*, html, body {
     @include ff(texts);
     @include bs(border-box);
 	@include z(base);
@@ -8,21 +8,23 @@
     border: none;
 	margin: 0;
 	padding: 0;
+	line-height: 1.2;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
 }
 
-a,
-a:visited,
-a:active {
-	list-style-type: none;
+a {
+	background-color: transparent;
+	-webkit-text-decoration-skip: objects;
 	text-decoration: none;
+	
+	&:hover,
+	&:active {
+		outline-width: 0;
+	} 
 }
 
 p, span { @include fz(tablet); }
-
-section {
-	width: 100%;
-	height: auto;
-}
 
 h1, h2, h3,
 h4, h5, h6 { font-weight: 400; }
@@ -31,11 +33,41 @@ h4, h5, h6 { font-weight: 400; }
 
 ul { list-style-type: none; }
 
-input, textarea, button {
-	display: block;
-	resize: none;
-}
+input, textarea, button { resize: none; }
 
 input[type="button"],
 input[type="submit"],
 button { cursor: pointer; }
+
+article, aside,
+footer, header,
+nav, section,
+figcaption, figure,
+main, menu, 
+input, textarea, 
+button, details { display: block; }
+
+audio, video { display: inline-block; }
+
+audio:not([controls]) { height: 0; }
+
+svg:not(:root) { overflow: hidden; }
+
+legend {
+	display: table;
+	max-width: 100%;
+	white-space: normal;
+}
+
+progress {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+::-webkit-file-upload-button { -webkit-appearance: button; }
+
+summary { display: list-item; }
+
+canvas { display: inline-block; }
+
+template, [hidden], audio:not([controls]) { display: none; }
