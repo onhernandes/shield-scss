@@ -1,0 +1,1 @@
+{"/var/www/shield-scss/gulpfile.js": {"sha1": "6cbd761536849f6bbdd3a31d5699d8fbb0512cbb", "tasks": {"server": {"dependencies": "", "name": "server"}, "default": {"dependencies": "", "name": "default"}, "styles": {"dependencies": "", "name": "styles"}}}}
