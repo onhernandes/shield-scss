@@ -1,0 +1,89 @@
+// 	Name: media-min
+// 	Trigger: mdmin($breakpoint)
+// 	Return media screen and (min-width)
+@mixin media-min($breakpoint) {
+	@if map-has-key($devices, $breakpoint) {
+		@media screen and (min-width: getDevice($breakpoint)) {
+			@content;
+		}
+	} @else {
+		@warn 'This breakpoint doesn\'t exist on $devices';
+	}
+}
+
+// short-hand for: media-min($bk)
+@mixin mdmin($bk) {
+	@include media-min($bk);
+}
+
+// 	Name: min-phone
+// 	Trigger: mnpn
+// 	Return media screen and (min-width: phone)
+@mixin min-phone {
+	@if map-has-key($devices, phone) {
+		@media screen and (min-width: getDevice(phone)) {
+			@content;
+		}
+	} @else {
+		@warn 'phone breakpoint doesn\'t exist on $devices';
+	}
+}
+
+// short-hand for: min-phone { @content }
+@mixin mnpn {
+	@include min-phone { @content; } 
+}
+
+// 	Name: min-tablet
+// 	Trigger: mntbt
+// 	Return media screen and (min-width: tablet)
+@mixin min-tablet {
+	@if map-has-key($devices, tablet) {
+		@media screen and (min-width: getDevice(tablet)) {
+			@content;
+		}
+	} @else {
+		@warn 'tablet breakpoint doesn\'t exist on $devices';
+	}
+}
+
+// short-hand for: min-tablet { @content }
+@mixin mntbt {
+	@include min-tablet { @content; } 
+}
+
+// 	Name: min-laptop
+// 	Trigger: mnlap
+// 	Return media screen and (min-width: laptop)
+@mixin min-laptop {
+	@if map-has-key($devices, laptop) {
+		@media screen and (min-width: getDevice(laptop)) {
+			@content;
+		}
+	} @else {
+		@warn 'laptop breakpoint doesn\'t exist on $devices';
+	}
+}
+
+// short-hand for: min-laptop { @content }
+@mixin mnlap {
+	@include min-laptop { @content; } 
+}
+
+// 	Name: min-desktop
+// 	Trigger: mndk
+// 	Return media screen and (min-width: desktop)
+@mixin min-desktop {
+	@if map-has-key($devices, desktop) {
+		@media screen and (min-width: getDevice(desktop)) {
+			@content;
+		}
+	} @else {
+		@warn 'desktop breakpoint doesn\'t exist on $devices';
+	}
+}
+
+// short-hand for: min-desktop { @content }
+@mixin mndk {
+	@include min-desktop { @content; } 
+}

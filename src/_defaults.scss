@@ -1,0 +1,33 @@
+// Default variables
+
+// @TODO: add modular-scale support with placeholders
+
+$modular-scale-base: 16;
+$modular-scale-fill: 95;
+$modular-scale-ratio: 2;
+
+$header-sizes: (
+	h1: 32px,
+	h2: 24px,
+	h3: 18.5px,
+	h4: 16px,
+	h5: 13.5px,
+	h6: 11px
+);
+
+$p: 16px;
+
+$z-index: (base: 0);
+
+$devices: (
+	phone: 760px.
+	tablet: 1024px,
+	desktop: 1280px,
+	laptop: 1366px
+);
+
+// Set list-style-type: none to <ul>s?
+$list-none: true;
+
+// Disable resize on input, textarea and buttons?
+$disable-resize: false;

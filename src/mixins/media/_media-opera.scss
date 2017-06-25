@@ -1,0 +1,9 @@
+// Name _media-opera
+// Targets CSS styles only for Opera 10+
+@mixin _media-opera() {
+	@warn 'Opera-only CSS styles are experimental, be sure you know what you are doing here';
+
+	@media not all and (-webkit-min-device-pixel-ratio:0) {
+		@content;
+	}
+}

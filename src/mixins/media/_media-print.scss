@@ -1,0 +1,13 @@
+// 	Name: print
+// 	Trigger: mpnt
+// 	Return media print
+@mixin media-print {
+	@media print {
+		@content;
+	}
+}
+
+// short-hand for: media-print { @content }
+@mixin mpnt {
+	@include media-print { @content; } 
+}

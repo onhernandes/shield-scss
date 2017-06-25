@@ -1,7 +1,5 @@
 //----------FLEXBOX MIXINS----------//
 
-//---FLEX CONTAINER---//
-
 // 	Name: display-flex
 // 	Trigger: df()
 // 	Return display: flex;
@@ -9,6 +7,11 @@
 	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
+}
+
+// short-hand for: display-flex()
+@mixin df() {
+	@include display-flex();
 }
 
 // 	Name: flex-flow
@@ -20,6 +23,11 @@
 	flex-flow: $flow;
 }
 
+// short-hand for: flex-flow($flow)
+@mixin ff($flow) {
+	@include flex-flow($flow);
+}
+
 // 	Name: inline-flex
 // 	Trigger: inf()
 // 	Return display: inline-flex
@@ -27,6 +35,11 @@
 	display: -webkit-inline-flex;
 	display: -ms-inline-flex;
 	display: inline-flex;
+}
+
+// short-hand for: inline-flex()
+@mixin inf() {
+	@include inline-flex();
 }
 
 // 	Name: flex-container
@@ -42,6 +55,11 @@
 	@include flex-flow($flow);
 }
 
+// short-hand for: flex-container()
+@mixin fc($flow, $inline: false) {
+	@include flex-container($flow, $inline);
+}
+
 // 	Name: justify-content
 // 	Trigger: jc($align)
 // 	Return justify-content
@@ -49,6 +67,11 @@
 	-webkit-justify-content: $align;
 	-ms-justify-content: $align;
 	justify-content: $align;	
+}
+
+// short-hand for: justify-content($align)
+@mixin jc($align) {
+	@include justify-content($align);
 }
 
 // 	Name: align-items
@@ -60,6 +83,11 @@
 	align-items: $align;	
 }
 
+// short-hand for: align-items($align)
+@mixin ai($align) {
+	@include align-items($align);
+}
+
 // 	Name: align-content
 // 	Trigger: ac($align)
 // 	Return align-content
@@ -67,6 +95,11 @@
 	-webkit-align-content: $align;
 	-ms-align-content: $align;
 	align-content: $align;	
+}
+
+// short-hand for: align-content($align)
+@mixin ac() {
+	@include align-content($align);
 }
 
 // 	Name: flex-align
@@ -78,8 +111,10 @@
 	@include align-content($align-content);
 }
 
-
-//---FLEX ITEM---//
+// short-hand for: flex-align($jc, $ai, $ac)
+@mixin fa($jc, $ai, $ac) {
+	@include flex-align($jc, $ai, $ac);
+}
 
 // 	Name: flex
 // 	Trigger: fx($flex)
@@ -88,6 +123,11 @@
 	-webkit-flex: $flex;
 	-ms-flex: $flex;
 	flex: $flex;
+}
+
+// short-hand for: flex($flex)
+@mixin fx($flex) {
+	@include flex($flex);
 }
 
 // 	Name: align-self
@@ -99,6 +139,11 @@
 	align-self: $align;
 }
 
+// short-hand for: align-self($align)
+@mixin as($align) {
+	@include align-self($align);
+}
+
 // 	Name: flex-grow
 // 	Trigger: fxg($grow)
 // 	Return flex-grow
@@ -106,6 +151,11 @@
 	-webkit-flex-grow: $grow;
 	-ms-flex-grow: $grow;
 	flex-grow: $grow;
+}
+
+// short-hand for: flex-grow($grow)
+@mixin fxg($grow) {
+	@include flex-grow($grow);
 }
 
 // 	Name: flex-shrink
@@ -117,6 +167,11 @@
 	flex-shrink: $shrink;
 }
 
+// short-hand for: flex-shrink($shrink)
+@mixin fxs($shrink) {
+	@include flex-shrink($shrink);
+}
+
 // 	Name: flex-basis
 // 	Trigger: fxb($basis)
 // 	Return flex-basis
@@ -124,4 +179,9 @@
 	-webkit-flex-basis: $basis;
 	-ms-flex-basis: $basis;
 	flex-basis: $basis;
+}
+
+// short-hand for: flex-basis($basis)
+@mixin fxb($basis) {
+	@include flex-basis($basis);
 }

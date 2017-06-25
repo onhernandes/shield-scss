@@ -1,0 +1,22 @@
+// Name addLayer
+// Add a layer to manage page-layers through z-index
+@function addLayer($key, $value) {
+	@if variable-exists($z-index) {
+		$c: ($key: $value);
+		$z-index: map-merge($z-index, $c);
+	}
+}
+
+// Name getLayer
+// Returns a layer from $z-index map
+@function getLayer($key) {
+	@if variable-exists($z-index) {
+		@if map-has-key($z-index, $key) {
+			@return map-get($z-index, $key);
+		} @else {
+			@return false;
+		}		
+	} @else {
+		@return false;
+	}
+}

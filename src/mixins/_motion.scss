@@ -9,6 +9,11 @@
 	transition: $transition;
 }
 
+// short-hand for: transition($trs);
+@mixin trs($trs) {
+	@include transition($trs);
+}
+
 // 	Name: transform
 // 	Trigger: trf($trf)
 // 	Return transform
@@ -16,4 +21,9 @@
 	-webkit-transform: $transform;
 	-ms-transform: $transform;
 	transform: $transform;
+}
+
+// short-hand for: transform($trs);
+@mixin trf($trs) {
+	@include transform($trs);
 }

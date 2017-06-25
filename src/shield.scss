@@ -1,17 +1,10 @@
-@import '_base',
-		'functions/_helpers',
-		'functions/_color',
-		'functions/_font',
-		'functions/_device',
-		'functions/_layers',
-		'mixins/_base',
-		'mixins/_flexbox',
-		'mixins/_font',
-		'mixins/_forms',
-		'mixins/_layers',
-		'mixins/_motion',
-		'mixins/_structure',
-		'mixins/_triggers',
-		'_functions',
-		'_mixins',
-		'reset';
+// Initial
+
+@import '_init';
+@import '_defaults';
+@import '_helpers';
+@import '_mixins';
+
+@if $reset == true {
+	@import 'reset';
+}

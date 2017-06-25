@@ -1,5 +1,3 @@
-//----------FORM MIXINS----------//
-
 //  Name: input-placeholder
 //  Trigger: inpl($inpl)
 // 	Return placeholder custom
@@ -21,3 +19,7 @@
 	}
 }
 
+// short-hand for: input-placeholder($trs);
+@mixin inpl($trs) {
+	@include input-placeholder($trs);
+}

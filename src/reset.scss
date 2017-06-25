@@ -1,9 +1,8 @@
 // Reset
 
 * {
-    @include ff(texts);
-    @include bs(border-box);
-	@include z(base);
+    @include box-sizing(border-box);
+	z-index: getLayer(base);
     font-weight: 300;
     border: none;
 	margin: 0;
@@ -17,23 +16,37 @@ a:active {
 	text-decoration: none;
 }
 
-p, span { @include fz(tablet); }
+p, span { font-size: $p; }
 
 section {
-	width: 100%;
+	@if variable-exists($custom) {
+		width: 100%;
+	}
+
 	height: auto;
 }
 
 h1, h2, h3,
 h4, h5, h6 { font-weight: 400; }
 
-@include ht();
+@each $key, $var in $header-sizes {
+	#{$key} {
+		font-size: $var;
+	}
+}
 
-ul { list-style-type: none; }
+ul { 
+	@if $list-none == true {
+		list-style-type: none; 
+	}
+}
 
 input, textarea, button {
 	display: block;
-	resize: none;
+
+	@if $disable-resize == true {
+		resize: none;
+	}
 }
 
 input[type="button"],

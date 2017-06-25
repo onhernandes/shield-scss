@@ -1,0 +1,40 @@
+// Name _media-ie
+// Targets CSS styles only for IE 6-, 7, 8 and so on, including MS Edge
+@mixin _media-ie() {
+	@warn 'IE-only CSS styles are experimental, be sure you know what you are doing here';
+
+	* html {
+		// targets IE 6-
+		@content;
+	}
+
+	*:first-child+html {
+		// targets IE 7
+		@content;
+	}
+
+	html>/**/body {
+		// targets IE 8(excepts 6, 7)
+		@content;
+	}
+
+	:root *> {
+		// targets everything but 6, 7, 8
+		@content;
+	}
+
+	*+html {
+		// targets IE 7
+		@content;
+	}
+
+	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		// -ms-high-contrast are IE-only CSS properties, targets IE10+
+		@content;
+	}
+
+	@supports (-ms-accelerator:true) {
+		// -ms-accelerator are Edge-only CSS properties, targets MS Edge
+		@content;
+	}
+}

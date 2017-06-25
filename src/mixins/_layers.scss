@@ -1,8 +1,0 @@
-//----------LAYERS----------//
-
-// 	Name: z-index
-// 	Trigger: z($z)
-// 	Return z-index using $z-index map;
-@mixin z-index($z) {
-	z-index: getLayer($z);
-}

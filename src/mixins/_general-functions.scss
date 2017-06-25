@@ -1,0 +1,10 @@
+// Name getDevice
+// getDevice returns a specific $devices value
+@function getDevice($device) {
+	@if map-has-key($devices, $device) {
+		@return map-get($devices, $device);
+	} @else {
+		@warn 'This device key does not exists!';
+		@return false;
+	}
+}

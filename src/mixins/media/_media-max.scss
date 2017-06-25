@@ -1,0 +1,89 @@
+// 	Name: media-max
+// 	Trigger: mdmax($breakpoint)
+// 	Return media screen and (max-width)
+@mixin media-max($breakpoint) {
+	@if map-has-key($devices, $breakpoint) {
+		@media screen and (max-width: getDevice($breakpoint)) {
+			@content;
+		}
+	} @else {
+		@warn 'This breakpoint doesn\'t exist on $devices';
+	}
+}
+
+// short-hand for: media-max($bk)
+@mixin mdmax($bk) {
+	@include media-max($bk);
+}
+
+// 	Name: max-phone
+// 	Trigger: mxpn
+// 	Return media screen and (max-width: phone)
+@mixin max-phone {
+	@if map-has-key($devices, phone) {
+		@media screen and (max-width: getDevice(phone)) {
+			@content;
+		}
+	} @else {
+		@warn 'phone breakpoint doesn\'t exist on $devices';
+	}
+}
+
+// short-hand for: max-phone { @content }
+@mixin mxpn {
+	@include max-phone { @content; } 
+}
+
+// 	Name: max-tablet
+// 	Trigger: mxtbt
+// 	Return media screen and (max-width: tablet)
+@mixin max-tablet {
+	@if map-has-key($devices, tablet) {
+		@media screen and (max-width: getDevice(tablet)) {
+			@content;
+		}
+	} @else {
+		@warn 'tablet breakpoint doesn\'t exist on $devices';
+	}
+}
+
+// short-hand for: max-tablet { @content }
+@mixin mxtbt {
+	@include max-tablet { @content; } 
+}
+
+// 	Name: max-laptop
+// 	Trigger: mxlap
+// 	Return media screen and (max-width: laptop)
+@mixin max-laptop {
+	@if map-has-key($devices, laptop) {
+		@media screen and (max-width: getDevice(laptop)) {
+			@content;
+		}
+	} @else {
+		@warn 'laptop breakpoint doesn\'t exist on $devices';
+	}
+}
+
+// short-hand for: max-laptop { @content }
+@mixin mxlap {
+	@include max-laptop { @content; } 
+}
+
+// 	Name: max-desktop
+// 	Trigger: mxdk
+// 	Return media screen and (max-width: desktop)
+@mixin max-desktop {
+	@if map-has-key($devices, desktop) {
+		@media screen and (max-width: getDevice(desktop)) {
+			@content;
+		}
+	} @else {
+		@warn 'desktop breakpoint doesn\'t exist on $devices';
+	}
+}
+
+// short-hand for: max-desktop { @content }
+@mixin mxdk {
+	@include max-desktop { @content; } 
+}

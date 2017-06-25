@@ -1,0 +1,14 @@
+// 	Name: media-between
+// 	Trigger: mdbet($min, $max)
+// 	Return media screen betwenn $min and $max
+@mixin media-between($min, $max) {
+	@media (min-width: $min) and (max-width: $max) {
+		@content;
+	}
+}
+
+// short-hand for: media-between($min, $max)
+@mixin mdbet($min, $max) {
+	@include media-between($min, $max);
+}
+

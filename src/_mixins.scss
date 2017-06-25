@@ -1,0 +1,14 @@
+// organize mixins' file calls
+
+@import 'mixins/_general-functions';
+@import 'mixins/_box-sizing';
+@import 'mixins/_flex';
+@import 'mixins/_placeholder';
+@import 'mixins/_motion';
+@import 'mixins/_z-index';
+
+@import 'mixins/media/_media-max';
+@import 'mixins/media/_media-min';
+@import 'mixins/media/_media-bet';
+@import 'mixins/media/_media-retina';
+@import 'mixins/media/_media-print';

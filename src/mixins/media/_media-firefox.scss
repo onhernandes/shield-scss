@@ -1,0 +1,9 @@
+// Name _media-firefox
+// Targets CSS styles only for firefox
+@mixin _media-firefox() {
+	@warn 'Firefox-only CSS styles are experimental, be sure you know what you are doing here';
+
+	@-moz-document url-prefix() {
+		@content;
+	}
+}
