@@ -1,14 +1,8 @@
 ![Shield SCSS logo](shield-base.jpg)
 
-# Shield SCSS
+# Shield SCSS - ARCHIVED
 
 Shield is a little library with the files that I use on my job/projects
-
-## Notes (for me when developing this thing and for who wanna use this)
-
-1. Functions are written in camelCase, variables and mixins in lower-case separated by -
-1. Variables are stored inisde of `functions/*.scss`, each file has your variables that will be used by the whole lib
-1. It isn't a framework, it is a library for helping me/you creating things with SASS/SCSS - I prefer SCSS but of course you can use with SASS. 
 
 ## How to
 
